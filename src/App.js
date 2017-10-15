@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
+
+import 'react-datepicker/dist/react-datepicker.css';
 
 class App extends Component {
   constructor(props) {
@@ -11,9 +15,18 @@ class App extends Component {
     this.state = {
       address: undefined,
       next: false,
-      manualAdd: false
+      manualAdd: false,
+      startDate: moment()
     }
+    this.handleChange = this.handleChange.bind(this);
   }
+
+  handleChange(date) {
+    this.setState({
+      startDate: date
+    });
+  }
+
   showManualAdd(e) {
     this.setState({
       manualAdd: true
@@ -91,8 +104,15 @@ class App extends Component {
             <form action="" method="post" >
               <div className="form-group">
                 <label for="birthday" className="grey-text left">DATE OF BIRTH</label><br />
-                <input className="form-control" type="date" name="birthday" id="birthday" value="" />
               </div>
+              <DatePicker
+                  className="form-control"
+                  selected={this.state.startDate}
+                  onChange={this.handleChange}
+                />
+                <div className="form-group">
+                  <div></div>
+                </div>
               <div className="form-group">
                 <input className="form-control" type="tel" name="phoneNum" id="phoneNum" data-validation="number"
                   maxLength={9} placeholder="PHONE NUMBER" pattern=".{9,}"
@@ -136,7 +156,7 @@ class App extends Component {
               }
               {!this.state.manualAdd &&
                 <div>
-                  <a className="manualAddress" onClick={(e) => { this.showManualAdd(e) }}>Enter address manually</a><br/>
+                  <a className="manualAddress" onClick={(e) => { this.showManualAdd(e) }}>Enter address manually</a><br />
                 </div>
               }
               <button type="submit" className="signbuttons btn btn-primary">ADD PROFILE DETAILS</button>
