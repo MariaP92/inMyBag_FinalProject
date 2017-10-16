@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './Home.css';
+import Products from './Products.js'
 import {
 	BrowserRouter,
 	Route,
@@ -7,8 +8,16 @@ import {
 	NavLink,
 	Redirect
 } from 'react-router-dom'
+import { Form, FormGroup, FormControl, Col, Grid, Row, ControlLabel, Button, Radio } from 'react-bootstrap';
 
-const Home = ( {model} ) => {
+class Home extends Component {
+    constructor(props) {
+        super(props);
+		this.state = {
+			product: null
+		}
+    }
+    render(){
 
 	return(
         <div className="container-fluid">
@@ -51,10 +60,23 @@ const Home = ( {model} ) => {
                         <span>We get it.</span></h1>
                         <h2>InMyBag is super high-speed insurance because life doesn't wait</h2>
                         <div>
-                            <input className="main-item-search" type="text" placeholder="What would you like to protect?" ng-change="add.searchStringChange()" ng-model="add.searchString" aria-invalid="false"/>
+                             <Col sm={5} md={5} xs={5}>
+									<FormControl componentClass="select" placeholder="select" onChange={e => {
+										this.setState({
+											product: e.target.value
+										})
+									}}>
+										<option value="">Seleccione Producto</option>
+										{Products.map((pro, index) => {
+											return <option key={index} value={index}>{pro.name}</option>
+										})}
+
+									</FormControl>
+								</Col>
                         </div>
                     </section>
             </div>
         </div>);
+    }
 }
 export default Home;
