@@ -3,11 +3,11 @@ import React, { Component } from "react";
 import DatePicker from "react-datepicker";
 import moment from "moment";
 import "react-datepicker/dist/react-datepicker.css";
-
+ // eslint-disable-next-line
 
 const NextPart = ( ) => {
   return(
-    <div>
+    <form className ="form" >
    <div className="payment-details">
                   <cc-input
 
@@ -118,23 +118,62 @@ const NextPart = ( ) => {
           Your payment will be processed via our secure payments provider
           </span>
     </div>
-               
-
-
-    </div>
+      <div className="billing-schedule-wrap">
+      <h3>Billing Schedule</h3>
+      <div className="choosePaymentMethod">
+        <label className="choosePaymentMethod-annual">
+          <span className="billing-label">Annually
+          </span>
+          <span 
+          ng-hide="payment.Dsk"
+           aria-hidden="false" 
+          >
+          <b class="ng-binding"
+          >£93.40
+          </b>/year
+          </span>
+        </label>
+        <label className="choosePaymentMethod-annual">
+          <span className="billing-label">Monthly
+          </span>
+          <span 
+          ng-hide="payment.Dsk"
+           aria-hidden="false" 
+          >
+          <b class="ng-binding"
+          >£7.78
+          </b>/month
+          </span>
+        </label>
+        </div>
+        <div>
+            <p  aria-hidden="false">You will be charged <b className="ng-binding">£93.40</b> today and will be given the option to renew your policy on <b className="ng-binding">15/10/2018</b>.</p>
+            <p aria-hidden="true" className="ng-hide">You will be charged <b className="ng-binding">£93.40</b> today and will be given the option to renew your policy on <b className="ng-binding">15/10/2018</b>.</p>
+            <p  aria-hidden="true" className="ng-hide">You will be charged <b className="ng-binding">£7.78</b> today and then on the <b className="ng-binding">16th every month until October 2018</b>.</p>
+            <p  className="ng-binding ng-hide" aria-hidden="true">You will be charged <b className="ng-binding">£7.78</b> today and then on the 16th every month until <b className="ng-binding">October 2018</b>.</p>
+            <input className="button button-full-width" type="submit" name="submit"value="Pay Now" aria-hidden="false"></input>
+        </div>
+      </div>
+    </form>
+    
   )
 }
-  
+
 class FormLogIn extends Component {
   constructor(props) {
     super(props);
     // this.date = moment().tz("Europe/London").format("YYYY-MM-DD");
     this.state = {
-      checked : false,
+      check : false,
       startDate :null,
     }
         this.handleChange = this.handleChange.bind(this);
 
+}
+changeCheck() {
+  this.setState({
+    check: true,
+  } )
 }
      handleChange(date) {
     this.setState({
@@ -153,9 +192,9 @@ class FormLogIn extends Component {
       alert('no marcado')
     }
    }
-   const inputChecked = () => {
+   const inputChecked = (e) => {
     this.setState( {
-            checked : true
+            check : true
           })
    }
     return <div className="body">
@@ -205,7 +244,7 @@ class FormLogIn extends Component {
           <ul className="checkbox-list">
             <li>
               <span>
-                <input type="checkbox" aria-invalid="false" onClick={this.state.checked == true}  />
+                <input type="checkbox" aria-invalid="false" onClick={this.state.check == true}  />
               </span>
               <span className="bolder">
                 <label>
@@ -241,7 +280,7 @@ class FormLogIn extends Component {
           </div>
 
           <div className="centered-text">
-            <button className="centered-text button button-full-width ng-binding" type="submit">
+            <button className="centered-text button button-full-width ng-binding" type="submit" >
               Continue</button> 
           </div>  
         </div>
@@ -249,5 +288,6 @@ class FormLogIn extends Component {
       </div>
   }
 }
+// onClick={this.state.check? alert('esta checked'): alert('no esta checked')
 
 export default FormLogIn;

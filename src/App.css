@@ -377,3 +377,80 @@ textarea {
 .pri {
     color: #f06;
 }
+.billing-schedule-wrap, .crashplan-wrap, .discount-wrap {
+    background: #fff;
+    padding: 25px 15px;
+}
+@media screen and (max-width: 760px)
+styles.min.css:3
+.choose-payment-source, .choosePaymentMethod {
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+}
+.choose-payment-source, .choosePaymentMethod {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto 1em;
+    background: #edf2f5;
+    text-align: center;
+}
+.choose-payment-source label, .choosePaymentMethod label {
+    width: 50%;
+    cursor: pointer;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    background: #666;
+    color: #fff;
+    border-right: 1px solid #fff;
+    font-size: .9em;
+    line-height: 1.2em;
+}
+.billing-schedule-wrap p, .crashplan-wrap p {
+    color: #555;
+}
+.billing-schedule-wrap p, .crashplan-wrap p, .discount-wrap p {
+    font-size: .9em;
+}
+.form {
+    margin: 0 auto;
+}
+input:not([type]), input[type="email" i], input[type="number" i], input[type="password" i], input[type="tel" i], input[type="url" i], input[type="text" i] {
+    padding: 1px 0px;
+}
+user agent stylesheet
+input {
+    -webkit-appearance: textfield;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    user-select: text;
+    cursor: auto;
+    padding: 1px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+user agent stylesheet
+input, textarea, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 13.3333px Arial;
+}
+.button-full-width, label.upload-button-full-width {
+    width: 100%;
+}
