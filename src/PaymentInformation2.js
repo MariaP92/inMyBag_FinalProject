@@ -16,6 +16,7 @@ class PaymentInformation2 extends Component {
               className="margin-top ng-valid ng-valid-maxlength ng-valid-pattern ng-dirty ng-valid-parse"
               style={{}}
             >
+            
               <div className="form__field">
                 <input
                   name="NameOnCard"

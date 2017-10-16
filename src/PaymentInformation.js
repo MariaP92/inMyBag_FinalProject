@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import DatePicker from "react-datepicker";
 import moment from "moment";
+import "react-datepicker/dist/react-datepicker.css";
 import {
   BrowserRouter,
   Route,
@@ -8,45 +9,27 @@ import {
   Redirect,
   NavLink
 } from "react-router-dom";
-import "react-datepicker/dist/react-datepicker.css";
 
-import "./PaymentInformation.css";
+("use strict");
 
-class PaymentInformation extends Component {
+class PaymentInformation2 extends Component {
   constructor(props) {
     super(props);
-    // this.date = moment().tz("Europe/London").format("YYYY-MM-DD");
     this.state = {
-      check: false,
-      startDate: moment(),
       next: false
     };
-    this.handleChange = this.handleChange.bind(this);
   }
-
-  handleChange(date) {
-    this.setState({
-      startDate: date
-    });
-  }
-
   render() {
-    const onInputChange = e => {
-      this.setState({
-        next: e.target.checked
-      });
-    };
-
     const BarProgress = () => {
       return (
-        <signup-progress-bar stage="2" className="ng-isolate-scope">
+        <signup-progress-bar stage="3" className="ng-isolate-scope">
           <h1 className="grey-text left">Payment Information</h1>
           <div
             className="signup-progress-wrap"
             ng-show="progress.show"
             aria-hidden="false"
           >
-            <div className="signup-progress-stage ng-binding">Step 3 of 4</div>
+            <div className="signup-progress-stage ng-binding">Step 4 of 4</div>
             <div className="signup-progress-bar">
               <div
                 ng-repeat="stage in progress.stages"
@@ -66,7 +49,7 @@ class PaymentInformation extends Component {
               </div>
               <div
                 ng-repeat="stage in progress.stages"
-                className="progress-item progress-item-active"
+                className="progress-item "
               >
                 <div className="progress-info">
                   <div className="progress-value" />
@@ -74,7 +57,7 @@ class PaymentInformation extends Component {
               </div>
               <div
                 ng-repeat="stage in progress.stages"
-                className="progress-item "
+                className="progress-item progress-item-active "
               >
                 <div className="progress-info">
                   <div className="progress-value" />
@@ -85,142 +68,154 @@ class PaymentInformation extends Component {
         </signup-progress-bar>
       );
     };
-    const bottonContinue = () => {
-      if (this.state.checked == true) {
-        alert("marcado");
-      } else {
-        alert("no marcado");
-      }
-    };
-    const inputChecked = e => {
-      this.setState({
-        check: true
-      });
-    };
     return (
       <div className="row col-md-8 col-md-offset-2 registeration pageaccount">
-        <div className="registerInner">
-          <BarProgress />
-          <div className="form__field">
-            <p>
-              Please read these points carefully. In order to join us at
-              InMyBag, you'll need to be able to confirm the following:
-            </p>
-            <ul className="ul__confirmation">
-              <li>
-                <span className="bolder">I'm a UK resident</span>
-              </li>
-              <li>
-                <span className="bolder">I'm aged 18 or over</span>
-              </li>
-              <li>
-                <span className="bolder">
-                  I have not had any insurance policy voided by the provider of
-                  the policy
-                </span>
-              </li>
-              <li>
-                <span className="bolder">
-                  I have no unspent criminal convictions
-                </span>
-                <a href="#" ng-click="confirm.readText =! confirm.readText">
-                  Read more
-                </a>
-              </li>
-              <li>
-                <span className="bolder">
-                  I have not have made a gadget insurance claim in the last 3
-                  years
-                </span>
-              </li>
-              <li>
-                <span className="bolder">
-                  I have proof of ownership for the devices I am covering
-                </span>{" "}
-                <a href="#">Read more</a>
-              </li>
-              <li>
-                <span className="bolder">
-                  My devices are less that 3 years old (5 years for laptops)
-                </span>
-              </li>
-            </ul>
+                             <BarProgress/>
 
-                <span>
-                  <input
-                    type="checkbox"
-                    aria-invalid="false"
-                    onChange={onInputChange}
-                  />
-                </span>
-                <span className="bolder">
-                  <label>
-                    I confirm that the above statements are true and correct.
-                  </label>
-                </span>
+        <form className="form">
+          
+          <div>
 
-            <form>
-              <br />
-              <p className="confirmation-note">
-                <small>
-                  <b>PLEASE NOTE:</b> There is a 14 day cooling off period after
-                  you have bought a policy in which you can change your mind,
-                  you will not be able to make a claim during this period.
-                </small>
-                <br />
-                <br />
-                <small>
-                  This is an annual policy which can be paid in monthly
-                  instalments or annually. You will be able to choose which on
-                  the next page.
-                </small>
-                <br />
-                <br />
-                <small>
-                  If you are unable to confirm and wish to become a member,
-                  please contact us at help@inmybag.co
-                </small>
-              </p>
-            </form>
-            <div>
-              <label
-                id="dob-placeholder"
-                className="floating-placeholder floating-placeholder-active floating-placeholder-blurred ng-binding"
-              >
-                Policy start date
-              </label>
-              <DatePicker
-                className="form-control"
-                selected={this.state.startDate}
-                onChange={this.handleChange}
-              />
-            </div>
-
-            <div className="centered-text">
-              {this.state.next ? 
-                <NavLink
-                  to={'/PaymentInformation2'}>
-                  <button
-                    className="centered-text button button-full-width ng-binding"
-                    type="submit"
-                  >
-                    Continue
-                  </button>
-                </NavLink>
-               : 
-                <button className="centered-text button button-full-width ng-binding"
-                  type="submit" disabled>
-                  Continue
-                </button>
-              }
+            <div className="payment-details">
+              <cc-input classname="ng-isolate-scope">
+                <div className="margin-top ng-valid ng-valid-maxlength ng-valid-pattern ng-dirty ng-valid-parse">
+                  <div className="form__field">
+                    <input
+                      type="text"
+                      name="NameOnCard"
+                      placeholder="Name On Card"
+                      className="ng-valid ng-isolate-scope ng-not-empty ng-dirty ng-valid-parse ng-touched"
+                      aria-invalid="false"
+                    />
+                    <label className="floating-placeholder floating-placeholder-active floating-placeholder-blurred">
+                      Name On Card
+                    </label>
+                  </div>
+                  <div className="form__field">
+                    <div id="ccInput">
+                      <div className="ng-hide" aria-hidden="true">
+                        <b className="ng-binding" />
+                      </div>
+                      <input
+                        type="text"
+                        name="CardNo"
+                        placeholder="Card Number"
+                        autoComplete="off"
+                        className="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty"
+                        aria-invalid="false"
+                      />
+                      <label className="floating-placeholder">
+                        Card Number
+                      </label>
+                    </div>
+                  </div>
+                  <div className="form__field third">
+                    <input
+                      type="text"
+                      name="SecurityNo"
+                      placeholder="Security Code"
+                      maxLength={4}
+                      autoComplete="off"
+                      className="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty ng-valid-maxlength"
+                      aria-invalid="false"
+                    />
+                    <label className="floating-placeholder">
+                      Security Code
+                    </label>
+                  </div>
+                  <div className="clear" />
+                  <div className="form__field payment-input half">
+                    <div className="payment-input-field">
+                      <input
+                        type="text"
+                        name="ExpMonth"
+                        maxLength={2}
+                        placeholder="Expiry Month"
+                        className="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty ng-valid-pattern ng-valid-maxlength"
+                        aria-invalid="false"
+                      />
+                      <label className="floating-placeholder">
+                        Expiry Month
+                      </label>
+                    </div>
+                    <div className="payment-input-field">
+                      <input
+                        type="text"
+                        name="ExpYear"
+                        maxLength={2}
+                        placeholder="Expiry Year"
+                        className="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty ng-valid-pattern ng-valid-maxlength"
+                        aria-invalid="false"
+                      />
+                      <label className="floating-placeholder">
+                        Expiry Year
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div className="clear" />
+              </cc-input>
+              <span className="bolder pri">
+                Your payment will be processed via our secure payments provider
+              </span>
             </div>
           </div>
-          {/* <NextPart/> */}
-        </div>
+          <div className="billing-schedule-wrap">
+            <h3>Billing Schedule</h3>
+            <div className="choosePaymentMethod">
+              <label className="choosePaymentMethod-annual">
+                <span className="billing-label">Annually</span>
+                <span aria-hidden="false">
+                  <div>
+                    <b className="ng-binding">£93.40</b>
+                    /year
+                  </div>
+                </span>
+              </label>
+              <label classname="choosePaymentMethod-annual">
+                <span classname="billing-label">Monthly</span>
+                <span aria-hidden="false">
+                  <b className="ng-binding">£7.78</b>
+                  /month
+                </span>
+              </label>
+            </div>
+            <div>
+              <p aria-hidden="false">
+                You will be charged <b className="ng-binding">£93.40</b> today
+                and will be given the option to renew your policy on{" "}
+                <b className="ng-binding">15/10/2018</b>.
+              </p>
+              <p aria-hidden="true" className="ng-hide">
+                You will be charged <b className="ng-binding">£93.40</b> today
+                and will be given the option to renew your policy on{" "}
+                <b className="ng-binding">15/10/2018</b>.
+              </p>
+              <p aria-hidden="true" className="ng-hide">
+                You will be charged <b className="ng-binding">£7.78</b> today
+                and then on the{" "}
+                <b className="ng-binding">
+                  16th every month until October 2018
+                </b>.
+              </p>
+              <p className="ng-binding ng-hide" aria-hidden="true">
+                You will be charged <b className="ng-binding">£7.78</b> today
+                and then on the 16th every month until{" "}
+                <b className="ng-binding">October 2018</b>.
+              </p>
+              <input
+                className="button button-full-width"
+                type="submit"
+                name="submit"
+                value="Pay Now"
+                aria-hidden="false"
+              />
+            </div>
+          </div>
+        </form>
       </div>
     );
   }
 }
-// onClick={this.state.check? alert('esta checked'): alert('no esta checked')
 
-export default PaymentInformation;
+export default PaymentInformation2;
