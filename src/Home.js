@@ -13,15 +13,36 @@ import { Form, FormGroup, FormControl, Col, Grid, Row, ControlLabel, Button, Rad
 class Home extends Component {
     constructor(props) {
         super(props);
+        this.productUser = [];
 		this.state = {
             product: null,
             complete : false
 		}
     }
+    changeValue(e){
+        console.log(Products[e.target.value]);
+        this.setState({
+            product: e.target.value,
+            complete: true
+        })
+        this.productUser.push(Products[e.target.value]);
+        console.log(this.productUser);
+    }
 
     render(){
+        const InsertProduct = () =>{
+            this.productUser.map((pro, index) => {
+                return (
+                    <li key={index} value={index}>
+                        <div>{pro.name}</div>
+                        <img src={pro.image}/>
+                        <div>{pro.price}</div>
+                    </li>);
+            })
+        }
 
-	return(
+	    return(
+        
         <div className="container-fluid">
                 <div className="branding col-lg-3 col-md-3 col-xs-3">
                     <img className="img-responsive"src="https://inmybag.co/images/branding/logo-transparent-white.svg"/>
@@ -48,7 +69,9 @@ class Home extends Component {
                     </div>
                                 <div className="col-lg-6 col-md-6 col-xs-6">
                         {this.state.complete&&<div className="input-products">
-                            holi
+                                <ul>
+                                    <InsertProduct/>
+                                </ul> 
                             </div>
                         }
             </div>
@@ -60,12 +83,7 @@ class Home extends Component {
                         <h2>InMyBag is super high-speed insurance because life doesn't wait</h2>
                         <div>
                              <Col sm={5} md={5} xs={5}>
-									<FormControl componentClass="select" placeholder="select" onChange={e => {
-										this.setState({
-                                            product: e.target.value,
-                                            complete: true
-										})
-									}}>
+									<FormControl componentClass="select" placeholder="select" onChange={(e) =>{this.changeValue(e)}}>
 										<option value="">Seleccione Producto</option>
 										{Products.map((pro, index) => {
 											return <option key={index} value={index}>{pro.name}</option>
