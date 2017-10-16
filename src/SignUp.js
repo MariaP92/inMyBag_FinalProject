@@ -7,6 +7,7 @@ class SignUp extends Component {
   render() {
     return (
        <div className="body">
+
           <div className="container">
                 <div className="panel panel-right">
                     <div className="panel-content">
@@ -34,7 +35,20 @@ class SignUp extends Component {
                                     Email
                                 </label>
                             </div>
-                         
+                            <div className="group">      
+                                <input type="password" required className="input" />
+                                <span className="highlight" />
+                                <label className="label">
+                                    Password
+                                </label>
+                            </div>
+                            <div className="group">      
+                                <input type="password" required className="input" />
+                                <span className="highlight" />
+                                <label className="label">
+                                    Confirm Password
+                                </label>
+                            </div>
                             <button className="log-btn">ADD PROFILE DETAILS</button>
                             <a><p>Forgot Password</p></a>
                             <a><p> Create an account </p></a>
