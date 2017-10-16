@@ -1,28 +1,379 @@
-.App {
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+.body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  background: #FDFDFD;
+}
+
+.body.menu-active .container {
+  transform: scale(0.9);
+}
+
+.container .inner {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.nav {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  margin: 0;
+  padding: 0 25px;
+  box-sizing: border-box;
+  z-index: 99;
+}
+
+.container .inner .panel {
+  position: relative;
+  box-sizing: border-box;
+  height: 100%;
+  width: 60%;
+  float: left;
+  transform: skew(-20deg);
+}
+
+.container .inner .panel.panel-left {
+  margin-left: -10%;
+}
+
+.container .inner .panel .panel-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) skew(20deg);
+}
+
+.container .inner .panel.panel-left .panel-content .image-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  opacity: 0.95;
+  background-image: url('http://uplusion23.net/images/RickGenestSm.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.container .inner .panel.panel-right {
+  margin-right: -10%;
+  background: #1B1B1B;
+}
+
+.container .inner .panel.panel-right .panel-content .form {
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  width: 300px;
+  min-height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-25%);
+}
+
+.container .inner .panel.panel-right .panel-content .form h1 {
+  display: block;
+  margin: 0 0 45px 0;
+  color: #B1B1B1;
+  font-weight: 200;
+  font-size: 18px;
+}
+
+.group { 
+  position: relative; 
+  margin-bottom: 25px; 
+}
+
+.input {
+  font-size: 13px;
+  height: 25px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #B1B1B1;
+  color: #B1B1B1;
+  background: rgba(0,0,0,0);
+  opacity: 0.5;
+  transition: 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  opacity: 1;
+}
+
+.label {
+  color: #B1B1B1; 
+  font-size: 13px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 15px;
+  opacity: 0.5;
+  transition: 0.2s ease all; 
+  -moz-transition: 0.2s ease all; 
+  -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+.input:focus ~ label, input:valid ~ label 		{
+  top: -10px;
+  font-size: 12px;
+  color: #B1B1B1;
+  opacity: 1;
+}
+
+.highlight {
+  position: absolute;
+  height: 60%; 
+  width: 100px; 
+  top: 25%; 
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* active stat
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from { background:#B1B1B1; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  from { background:#B1B1B1; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+  from { background:#B1B1B1; }
+  to 	{ width:0; background:transparent; }
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+  
+  transition: all 0.33s ease;
+}
+
+.menu::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(240,240,240,0.0);
+  
+  transition: all 0.45s ease;
+}
+
+.body.menu-active .menu {
+  left: 0;
+}
+
+.body.menu-active .menu::before {
+  background: rgba(240,240,240,0.9);
+}
+.bolder,
+.light {
+  font-weight: 400;
+}
+.confirmation-note {
+  /* margin-bottom: 0; */
+  line-height: 18px;
+}
+.ul__confirmation> li {
+ list-style-image: url(https://inmybag.co/images/icons/tick.svg);
+  background-position: left 0 top .5em;
+  background-repeat: no-repeat;
+  padding: 0 0 0 1.5em;
+  background-size: 14px 14px;
+  font-size: .9em;
+
+}
+li {
+  list-style-type: none;
+}
+a {
+  color: #f06;
+  text-decoration: none;
+}
+.checkbox-list label {
+  cursor: pointer;
+  color: #222;
+  font-size: 1em;
+  text-transform: none;
+  margin-bottom: -2px;
+}
+.checkbox-list {
+  margin: 0;
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+.confirmation-note {
+  margin-bottom: 0;
+  line-height: 18px !important;
+}
+.form__field {
+  position: relative;
+  margin-bottom: 34px;
+  margin-top: 2px;
+}
+.button,
+label.upload-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background-color: #3f8ddf;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 700;
+  padding: .8em 2em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  user-select: none;
+  vertical-align: middle;
+  white-space: normal;
+  min-width: 100px;
+}
+.centered-text {
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+label.floating-placeholder.invalid {
+  color: #ff4d4d;
+}
+label.floating-placeholder-blurred {
+  color: #444;
+  top: -12px;
+  opacity: 1;
+}
+label.floating-placeholder-active {
+  color: #f06;
+  top: -12px;
+  opacity: 1;
+}
+label.floating-placeholder {
+  position: absolute;
+  top: -9px;
+  opacity: 0;
+  transition: all .4s ease;
+  z-index: 2;
+  left: 0;
+}
+label.floating-placeholder.invalid {
+    color: #ff4d4d;
+}
+styles.min.css:3
+label.floating-placeholder-blurred {
+    color: #444;
+    top: -12px;
+    opacity: 1;
+}
+styles.min.css:3
+label.floating-placeholder-active {
+    color: #f06;
+    top: -12px;
+    opacity: 1;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+styles.min.css:3
+label.floating-placeholder {
+    position: absolute;
+    top: -9px;
+    opacity: 0;
+    transition: all .4s ease;
+    z-index: 2;
+    left: 0;
 }
-
-.App-title {
-  font-size: 1.5em;
+label {
+  font-weight: 500;
+  font-size: .7em;
+  line-height: 1em;
+  padding: 0 5px;
+  color: #f06;
+  /* display: block; */
+  margin-bottom: -5px;
+  text-transform: uppercase;
 }
-
-.App-intro {
-  font-size: large;
+.payment-details {
+  background: #fff;
+  padding: 25px 15px;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+input:not([type]),
+input[type=color],
+input[type=date],
+input[type=datetime-local],
+input[type=datetime],
+input[type=email],
+input[type=file],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+select,
+select[multiple=multiple],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  color: #333;
+  line-height: 1em;
+  font-size: 1em;
+  padding: 0 5px;
+  padding-bottom: .1em;
+  margin: 0;
+  width: 100%;
+  border-radius: 0;
+  z-index: 5;
+  position: relative;
+  box-shadow: none;
+}
+.pri {
+    color: #f06;
 }
