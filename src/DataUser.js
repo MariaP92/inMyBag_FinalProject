@@ -3,7 +3,13 @@ import logo from './logo.svg';
 import './DataUser.css';
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
-
+import {
+	BrowserRouter,
+	Route,
+	Switch,
+    Redirect,
+    NavLink
+} from 'react-router-dom'
 import 'react-datepicker/dist/react-datepicker.css';
 
 class DataUser extends Component {
@@ -160,6 +166,11 @@ class DataUser extends Component {
                 </div>
               }
               <button type="submit" className="signbuttons btn btn-primary">ADD PROFILE DETAILS</button>
+              <NavLink
+              to="/paymentinformation">
+                <button type="submit" className="signbuttons btn btn-primary">ADD PROFILE DETAILS</button>
+              </NavLink >
+
             </form>
           </div>
 
