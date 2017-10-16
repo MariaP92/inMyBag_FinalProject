@@ -26,13 +26,16 @@ const App = (props) => {
 			<Switch>
 
 				<Route  path="/inMyBag_FinalProject"
-				       render={() => <Redirect to= {'/home'}/>}/>
-				<Route  path="/home" render={() => <Home model={model} />}/>
+				       render={() => <Redirect to= {'/'}/>}/>
+				<Route  path="/home" render={() => <PaymentInformation model={model} />}/>
 				<Route  path="/datauser" render={() => <DataUser model={model} />}/>
 				<Route  path="/login" render={() => <LogIn model={model} />}/>
 				<Route  path="/paymentinformation" render={() => <PaymentInformation model={model} />}/>
+				<Route  path="/paymentinformation" render={() => <PaymentInformation model={model} />}/>
+
+				
 				<Route  path="/signup" render={() => <SignUp model={model} />}/>
-				<Route component={Home}/>
+				<Route component={PaymentInformation}/>
 			</Switch>
 		</div>
 	</BrowserRouter>)
