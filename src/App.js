@@ -1,10 +1,4 @@
 import React, {Component} from 'react';
-import {
-	BrowserRouter,
-	Route,
-	Switch,
-	Redirect
-} from 'react-router-dom'
 import './App.css';
 import Home from './Home';
 import DataUser from './DataUser';
@@ -17,8 +11,6 @@ import {
 	Switch,
 	Redirect
 } from 'react-router-dom'
-
-import Home from './Home';
 
 const NotFound = (props) => {
 	return (
