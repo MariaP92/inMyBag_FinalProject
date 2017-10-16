@@ -1,4 +1,13 @@
 
+import React, {Component} from 'react';
+import './Home.css';
+import {
+	BrowserRouter,
+	Route,
+	Switch,
+	NavLink,
+	Redirect
+} from 'react-router-dom'
 class Quiz extends React.Component {
    constructor(props) {
       super(props);
@@ -42,7 +51,7 @@ class Quiz extends React.Component {
                     </div>
                     </div>
                 </div>
-            <div className="trapecio">
+           <div className="trapecio">
                     <section className="search-product margin-top-xl">
                         <h1 id="add-items-header" className="white-text"><span>You need your tech.&nbsp;</span>
                         <span>We get it.</span></h1>
@@ -51,7 +60,10 @@ class Quiz extends React.Component {
                             <input className="main-item-search" type="text" placeholder="What would you like to protect?" ng-change="add.searchStringChange()" ng-model="add.searchString" aria-invalid="false"/>
                         </div>
                     </section>
-            </div>
+                    {!this.state.comple&& 
+                    <div>Holi</div>
+                    }
+            </div>}
         </div>);
         }
     }

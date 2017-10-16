@@ -14,9 +14,11 @@ class Home extends Component {
     constructor(props) {
         super(props);
 		this.state = {
-			product: null
+            product: null,
+            complete : false
 		}
     }
+
     render(){
 
 	return(
@@ -54,7 +56,8 @@ class Home extends Component {
                              <Col sm={5} md={5} xs={5}>
 									<FormControl componentClass="select" placeholder="select" onChange={e => {
 										this.setState({
-											product: e.target.value
+                                            product: e.target.value,
+                                            complete: true
 										})
 									}}>
 										<option value="">Seleccione Producto</option>
@@ -67,6 +70,12 @@ class Home extends Component {
                         </div>
                     </section>
             </div>
+            <Col sm={7} md={7} xs={7}>
+                        {this.state.complete&&<div className="input-products">
+                            holi
+                            </div>
+                        }
+                        </Col>
         </div>);
     }
 }
