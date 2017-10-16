@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import DatePicker from "react-datepicker";
 import moment from "moment";
+import "react-datepicker/dist/react-datepicker.css";
+import "./PaymentInformation.css";
 import {
-  BrowserRouter,
+  BrowserRouter,  
   Route,
   Switch,
   Redirect,
   NavLink
 } from "react-router-dom";
-import "react-datepicker/dist/react-datepicker.css";
-import "./PaymentInformation.css";
 
 class PaymentInformation extends Component {
   constructor(props) {
@@ -107,7 +107,7 @@ class PaymentInformation extends Component {
             </p>
             <ul className="ul__confirmation">
               <li>
-                <span className="bolder">I'm a UK resident</span>
+                <span className="bolder">I'm a Peruvian resident</span>
               </li>
               <li>
                 <span className="bolder">I'm aged 18 or over</span>
@@ -200,9 +200,6 @@ class PaymentInformation extends Component {
                 <NavLink
                   to={'/PaymentInformation2'}>
                   <button
-                    onClick={e => {
-                      this.showNext(e);
-                    }}
                     className="centered-text button button-full-width ng-binding"
                     type="submit"
                   >
