@@ -12,10 +12,9 @@ import {
 	Redirect
 } from 'react-router-dom'
 
-
 const NotFound = (props) => {
 	return (
-		<div><h2> Error 404!!</h2></div>
+		<div><h2> Error 404! </h2></div>
 	);
 }
 
@@ -25,6 +24,7 @@ const App = (props) => {
 	return (<BrowserRouter>
 		<div>
 			<Switch>
+
 				<Route  path="/inMyBag_FinalProject"
 				       render={() => <Redirect to= {'/home'}/>}/>
 				<Route  path="/home" render={() => <Home model={model} />}/>

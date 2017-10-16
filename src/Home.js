@@ -48,5 +48,4 @@ const Home = ( {model} ) => {
             </div>
         </div>);
 }
-
 export default Home;
