@@ -15,7 +15,7 @@ import {
 
 const NotFound = (props) => {
 	return (
-		<div><h2> Error 404! </h2></div>
+		<div><h2> Error 404!!</h2></div>
 	);
 }
 
