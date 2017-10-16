@@ -46,6 +46,12 @@ class Home extends Component {
                         </ul>
                     </div>
                     </div>
+                                <div className="col-lg-6 col-md-6 col-xs-6">
+                        {this.state.complete&&<div className="input-products">
+                            holi
+                            </div>
+                        }
+            </div>
                 </div>
             <div className="trapecio">
                     <section className="search-product margin-top-xl">
@@ -70,12 +76,6 @@ class Home extends Component {
                         </div>
                     </section>
             </div>
-            <Col sm={7} md={7} xs={7}>
-                        {this.state.complete&&<div className="input-products">
-                            holi
-                            </div>
-                        }
-                        </Col>
         </div>);
     }
 }

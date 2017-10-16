@@ -4,9 +4,9 @@ import './DataUser.css';
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
 import {
-	BrowserRouter,
-	Route,
-	Switch,
+    BrowserRouter,
+    Route,
+    Switch,
     Redirect,
     NavLink
 } from 'react-router-dom'
