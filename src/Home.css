@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+.container-fluid {
+background-image: url('https://i.ytimg.com/vi/pNSKQ9Qp36M/maxresdefault.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+color: #ffffff;
+font-family: Roboto,Helvetica,Arial,sans-serif;
+width: 100%;
+min-width: 285px;
+background-color: #f4f4f5;
+line-height: 1.6em;
+height: 100%;
+font-weight: 300;
+}
+
+#header{
+    text-align: center;
+    z-index: 100;
+    width: 100%;
+    min-width: 304px;
+    position: relative;
+}
+.branding {
+    float: left;
+    position: relative;
+    padding: 15px;
+    width: 20%;
+    left: 10%;
+    
+}
+.navbar {
+    background-color:transparent !important;
+    border-color:transparent;
+    background-image:none;
+    box-shadow:none;  
+}
+.header-nav-menu {
+    position: relative;
+    margin: 2px 0;
+    left: 0;
+}
+.header-nav-menu li {
+    padding: 12px;
+    padding-top: 14px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1em;
+}
+.mineul{
+    font-size:17px;
+    margin-top:9px; 
+    color:white;
+}
+.trapecio {
+    position: relative;
+    left: -3%;
+    width: 50%;
+    min-width: 285px; 
+    border-right: 109px solid transparent;
+    border-bottom: 900px solid #F00B7A;
+}
+.search-product{
+    position: absolute;
+    margin-top: 150px;
+    left:10%;
+}
+.product-search h2 {
+    color: #fff;
+    font-size: 1.3em;
+}
+#add-items-header {
+    font-size: 1.8em;
+    margin: 0 0 10px;
+    text-align: left;
+}
+.main-item-search{
+    padding: 10px 0;
+    padding-bottom: 5px;
+    color: #fff;
+    border: none;
+    font-size: 1.5em;
+    font-weight: 700;
+    background: url(/images/icons/search-input-white.svg) no-repeat;
+    background-size: 18px;
+    background-position: right bottom 8px;
+    background: url(/images/icons/search-input.svg) no-repeat;
+    background-position: right 15px center;
+    background-color: #f0f0f0;
+    background-size: 20px;
+    color: #333;
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: 300;
+}
