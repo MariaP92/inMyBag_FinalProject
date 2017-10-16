@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import DatePicker from "react-datepicker";
 import moment from "moment";
+import './PaymentInformation.css';
 import "react-datepicker/dist/react-datepicker.css";
 import {
   BrowserRouter,
@@ -70,26 +71,17 @@ class PaymentInformation2 extends Component {
     };
     return (
       <div className="row col-md-8 col-md-offset-2 registeration pageaccount">
-                             <BarProgress/>
+        <BarProgress />
 
         <form className="form">
-          
+
           <div>
 
-            <div className="payment-details">
+            <div >
               <cc-input classname="ng-isolate-scope">
                 <div className="margin-top ng-valid ng-valid-maxlength ng-valid-pattern ng-dirty ng-valid-parse">
-                  <div className="form__field">
-                    <input
-                      type="text"
-                      name="NameOnCard"
-                      placeholder="Name On Card"
-                      className="ng-valid ng-isolate-scope ng-not-empty ng-dirty ng-valid-parse ng-touched"
-                      aria-invalid="false"
-                    />
-                    <label className="floating-placeholder floating-placeholder-active floating-placeholder-blurred">
-                      Name On Card
-                    </label>
+                  <div className="form-group">
+                    <input class="form-control" type="text" name="cardname" id="cardname" placeholder="NAME ON CARD" required />
                   </div>
                   <div className="form__field">
                     <div id="ccInput">
