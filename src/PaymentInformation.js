@@ -9,8 +9,7 @@ const NextPart = ( ) => {
   return(
     <form className ="form" >
    <div className="payment-details">
-                  <cc-input
-
+          <cc-input
           className="ng-isolate-scope">
           <div
 
