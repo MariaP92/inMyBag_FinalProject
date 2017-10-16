@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-
+import {
+	BrowserRouter,
+	Route,
+	Switch,
+	NavLink,
+	Redirect
+} from 'react-router-dom'
 import DatePicker from "react-datepicker";
 import moment from "moment";
 import "react-datepicker/dist/react-datepicker.css";
@@ -8,7 +14,6 @@ import "react-datepicker/dist/react-datepicker.css";
 class PaymentInformation extends Component {
   constructor(props) {
     super(props);
-    // this.date = moment().tz("Europe/London").format("YYYY-MM-DD");
     this.state = {
       check : false,
       startDate :null,
@@ -27,8 +32,6 @@ changeCheck() {
     });
   }
 
-
-  
   render() {
     const bottonContinue = () => {
       
