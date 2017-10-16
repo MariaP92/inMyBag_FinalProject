@@ -3,6 +3,13 @@ import logo from './logo.svg';
 import './DataUser.css';
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
+import {
+	BrowserRouter,
+	Route,
+	Switch,
+    Redirect,
+    NavLink
+} from 'react-router-dom'
 
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -159,7 +166,14 @@ class DataUser extends Component {
                   <a className="manualAddress" onClick={(e) => { this.showManualAdd(e) }}>Enter address manually</a><br />
                 </div>
               }
+<<<<<<< HEAD
               <button type="submit" className="signbuttons btn btn-primary">ADD PROFILE DETAILS</button>
+=======
+              <NavLink
+              to="/paymentinformation">
+                <button type="submit" className="signbuttons btn btn-primary">ADD PROFILE DETAILS</button>
+              </NavLink >
+>>>>>>> a44c13c20460c2682c6d4e39c9ef80402a2dd190
             </form>
           </div>
 

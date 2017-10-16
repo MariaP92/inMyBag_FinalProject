@@ -1,24 +1,21 @@
-import React, {Component} from 'react';
-import './Home.css';
-import Products from './Products.js'
-import {
-	BrowserRouter,
-	Route,
-	Switch,
-	NavLink,
-	Redirect
-} from 'react-router-dom'
-import { Form, FormGroup, FormControl, Col, Grid, Row, ControlLabel, Button, Radio } from 'react-bootstrap';
 
-class Home extends Component {
-    constructor(props) {
-        super(props);
-		this.state = {
-			product: null
-		}
-    }
-    render(){
+class Quiz extends React.Component {
+   constructor(props) {
+      super(props);
+      this.state = {
+        answers : [],
+        count : 0,
+        complete : false,
 
+     };
+   }
+
+    compplete(){
+        this.setState({
+            compare: true
+        })
+
+   render() {
 	return(
         <div className="container-fluid">
                 <div className="branding col-lg-3 col-md-3 col-xs-3">
@@ -51,23 +48,11 @@ class Home extends Component {
                         <span>We get it.</span></h1>
                         <h2>InMyBag is super high-speed insurance because life doesn't wait</h2>
                         <div>
-                             <Col sm={5} md={5} xs={5}>
-									<FormControl componentClass="select" placeholder="select" onChange={e => {
-										this.setState({
-											product: e.target.value
-										})
-									}}>
-										<option value="">Seleccione Producto</option>
-										{Products.map((pro, index) => {
-											return <option key={index} value={index}>{pro.name}</option>
-										})}
-
-									</FormControl>
-								</Col>
+                            <input className="main-item-search" type="text" placeholder="What would you like to protect?" ng-change="add.searchStringChange()" ng-model="add.searchString" aria-invalid="false"/>
                         </div>
                     </section>
             </div>
         </div>);
+        }
     }
 }
-export default Home;
