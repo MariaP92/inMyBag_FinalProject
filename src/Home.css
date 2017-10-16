@@ -7,7 +7,6 @@ color: #ffffff;
 font-family: Roboto,Helvetica,Arial,sans-serif;
 width: 100%;
 min-width: 285px;
-background-color: #f4f4f5;
 line-height: 1.6em;
 height: 100%;
 font-weight: 400;
@@ -15,11 +14,18 @@ font-weight: 400;
 }
 
 #header{
+    color :white;
     text-align: center;
     z-index: 100;
     width: 100%;
     min-width: 304px;
     position: relative;
+}
+.container {
+    padding-right: 15px;
+    padding-left: 30%;
+    margin-right: auto;
+    margin-left: auto;
 }
 .branding {
     float: left;
@@ -27,6 +33,7 @@ font-weight: 400;
     padding: 15px;
     width: 20%;
     left: 10%;
+    z-index: 5000;
     
 }
 .navbar {

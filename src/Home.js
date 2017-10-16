@@ -12,10 +12,10 @@ const Home = ( {model} ) => {
 
 	return(
         <div className="container-fluid">
-            <div className="navbar transparent navbar-inverse navbar-static-top hr">
-                <div className="navbar-brand logo"></div>
-                <div className="navbar-brand-right">
+                <div className="branding col-lg-3 col-md-3 col-xs-3">
+                    <img className="img-responsive"src="https://inmybag.co/images/branding/logo-transparent-white.svg"/>
                 </div>
+                <div className="navbar transparent navbar-inverse navbar-static-top hr col-lg-9 col-md-9 col-xs-9">
                 <div className="container">
                     <div className="navbar-header">
                         <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -25,24 +25,15 @@ const Home = ( {model} ) => {
                         </button>
 
                     </div>
-                    <div className="branding col-lg-3 col-md-3 col-xs-3">
-                        <img className="img-responsive"src="https://inmybag.co/images/branding/logo-transparent-white.svg"/>
-                    </div>
                     <div className="navbar-collapse collapse header-nav-menu col-lg-7 col-md-7 col-xs-7 ">
                         <ul className="nav navbar-nav mineul">
-                        <li><a href="#">How it works</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Log</a></li>
-                        <li><a href="#">Sign Up</a></li>
+                        <li><NavLink exact to="/howitwork">How it works</NavLink></li>
+                        <li><NavLink exact to="/blog">BLog</NavLink></li>
+                        <li><NavLink exact to="/login">Log In</NavLink></li>
+                        <li><NavLink exact to="/signup">Sign Up</NavLink></li>
+                        <li><NavLink exact to="/bag">Bag({0})</NavLink></li>
                         </ul>
                     </div>
-                    <div className="navbar-collapse collapse header-nav-menu col-lg-3 col-md-3 col-xs-3">
-                        <ul className="nav navbar-nav mineul">
-                                <li>
-                                    Bag({0})
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             <div className="trapecio">
