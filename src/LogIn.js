@@ -12,9 +12,9 @@ class LogIn extends Component {
     render() {
       return (
          <div className="body">
-              <div className="container">
-                  <div className="panel panel-right">
-                      <div className="panel-content">
+            <div className="row col-md-8 col-md-offset-2 registeration pageaccount">
+                <div className="registerInner">
+                    <div className="col-md-6 signUp">
                           <div className="form">
                           <h1>LogIn</h1>
                           <form>

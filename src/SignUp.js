@@ -40,9 +40,7 @@ class SignUp extends Component {
             );
         }
         return (
-
             <div className="body">
-
                 <div className="row col-md-8 col-md-offset-2 registeration pageaccount">
                     <div className="registerInner">
                         <div className="col-md-6 signUp">
