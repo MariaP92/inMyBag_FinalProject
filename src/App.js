@@ -4,6 +4,7 @@ import Home from './Home';
 import DataUser from './DataUser';
 import LogIn from './LogIn';
 import PaymentInformation from './PaymentInformation';
+import PaymentInformation2 from './PaymentInformation2';
 import SignUp from './SignUp';
 import {
 	BrowserRouter,
@@ -31,6 +32,7 @@ const App = (props) => {
 				<Route  path="/datauser" render={() => <DataUser model={model} />}/>
 				<Route  path="/login" render={() => <LogIn model={model} />}/>
 				<Route  path="/paymentinformation" render={() => <PaymentInformation model={model} />}/>
+        <Route  path="/paymentinformation2" render={() => <PaymentInformation2 model={model} />}/>
 				<Route  path="/signup" render={() => <SignUp model={model} />}/>
 				<Route component={Home}/>
 			</Switch>
