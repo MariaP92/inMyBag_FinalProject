@@ -14,9 +14,11 @@ class Home extends Component {
     constructor(props) {
         super(props);
 		this.state = {
-			product: null
+            product: null,
+            complete : false
 		}
     }
+
     render(){
 
 	return(
@@ -44,6 +46,12 @@ class Home extends Component {
                         </ul>
                     </div>
                     </div>
+                                <div className="col-lg-6 col-md-6 col-xs-6">
+                        {this.state.complete&&<div className="input-products">
+                            holi
+                            </div>
+                        }
+            </div>
                 </div>
             <div className="trapecio">
                     <section className="search-product margin-top-xl">
@@ -54,7 +62,8 @@ class Home extends Component {
                              <Col sm={5} md={5} xs={5}>
 									<FormControl componentClass="select" placeholder="select" onChange={e => {
 										this.setState({
-											product: e.target.value
+                                            product: e.target.value,
+                                            complete: true
 										})
 									}}>
 										<option value="">Seleccione Producto</option>
@@ -70,5 +79,4 @@ class Home extends Component {
         </div>);
     }
 }
-
 export default Home;
