@@ -4,6 +4,26 @@ import './SignUp.css';
 
 
 class SignUp extends Component {
+    constructor(props) {
+        super(props);
+        this.state={
+            password: false
+        }
+    }
+
+    // comparePassword(){
+    //     if(==){
+    //         this.setState({
+    //             password:true
+    //         });
+    //     }
+    //     else{
+    //         this.setState({
+    //             password:false
+    //         });
+    //     }
+    // }
+
     render() {
         const BarProgress = () => {
             return (
