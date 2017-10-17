@@ -83,8 +83,6 @@ class SignUp extends Component {
                                 </label>
                                     </div>
                                     <button className="log-btn btn btn-primary">ADD PROFILE DETAILS</button>
-                                    <a><p>Forgot Password</p></a>
-                                    <a><p> Create an account </p></a>
                                 </form>
                                 <div className="row">
                                   <div>
