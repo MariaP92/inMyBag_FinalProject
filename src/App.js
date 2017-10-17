@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-//import './App.css';
+import './App.css';
 import Home from './Home';
 import DataUser from './DataUser';
-//import LogIn from './LogIn';
+import LogIn from './LogIn';
 import PaymentInformation from './PaymentInformation';
 import PaymentInformation2 from './PaymentInformation2';
 import SignUp from './SignUp';

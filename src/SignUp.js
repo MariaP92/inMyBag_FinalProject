@@ -108,12 +108,12 @@ class SignUp extends Component {
                                     <a><p>Forgot Password</p></a>
                                     <a><p> Create an account </p></a>
                                 </form>
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-3 col-xs-6">
-                                        <a href="http://www.facebook.com" target="_blank" class="btn btn-sm animated-button victoria-four">LOG IN WITH FACEBOOK</a>
+                                <div className="row">
+                                    <div className="col-md-3 col-sm-3 col-xs-6">
+                                        <a href="http://www.facebook.com" target="_blank" className="btn btn-sm animated-button victoria-four">LOG IN WITH FACEBOOK</a>
                                     </div>
-                                    <div class="col-md-3 col-sm-3 col-xs-6">
-                                        <a href="http://www.gmail.com" target="_blank" class="btn btn-sm animated-button victoria-four">LOG IN WITH GOOGLE</a>
+                                    <div className="col-md-3 col-sm-3 col-xs-6">
+                                        <a href="http://www.gmail.com" target="_blank" className="btn btn-sm animated-button victoria-four">LOG IN WITH GOOGLE</a>
                                     </div>
                                 </div>
                             </div>
