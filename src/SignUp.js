@@ -1,28 +1,50 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import Header from './Header';
 import './SignUp.css';
+import {
+    BrowserRouter,
+    Route,
+    Switch,
+    Redirect,
+    NavLink
+} from 'react-router-dom'
 
 
 class SignUp extends Component {
     constructor(props) {
         super(props);
-        this.state={
-            password: false
-        }
+        this.pass = undefined,
+            this.passConfirm = undefined,
+            this.state = {
+                password: false
+            }
     }
 
-    // comparePassword(){
-    //     if(==){
-    //         this.setState({
-    //             password:true
-    //         });
-    //     }
-    //     else{
-    //         this.setState({
-    //             password:false
-    //         });
-    //     }
-    // }
+    inputPass(e) {
+        console.log(e.target.value);
+        this.pass = e.target.value;
+        this.comparePassword();
+    }
+
+    inputPassConfirm(e) {
+        console.log(e.target.value);
+        this.passConfirm = e.target.value;
+        this.comparePassword();
+    }
+
+    comparePassword() {
+        if (this.pass === this.passConfirm) {
+            this.setState({
+                password: true
+            });
+        }
+        else {
+            this.setState({
+                password: false
+            });
+        }
+    }
 
     render() {
         const BarProgress = () => {
@@ -59,10 +81,47 @@ class SignUp extends Component {
 
             );
         }
+
+
+
+        const ButtonsSocial = () => {
+            return (
+                <div className="row">
+                    <div>
+                        <div className="col-lg-6 col-xs-12">
+                            <a href="http://www.facebook.com" target="_blank" className="a1">
+                                <div id="facebook" className="button1">
+                                    Facebook
+                            <div className="cover facebook">
+                                        <li className="fa fa-facebook fa-2x" />
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="col-lg-6 col-xs-12">
+                            <a href="http://www.gmail.com" target="_blank">
+                                <div id="google" className="button1">
+                                    Google+
+                            <div className="cover google">
+                                        <li className="fa fa-google-plus fa-2x" />
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <link
+                            href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext"
+                            rel="stylesheet"
+                            type="text/css" />
+                        <link
+                            href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+                            rel="stylesheet" />
+                    </div>
+                </div>
+            );
+        }
+
         return (
-
             <div className="body">
-
                 <div className="row col-md-8 col-md-offset-2 registeration pageaccount">
                     <div className="registerInner">
                         <div className="col-md-6 signUp">
@@ -74,48 +133,47 @@ class SignUp extends Component {
                                         <span className="highlight" />
                                         <label className="label">
                                             First Name
-                                </label>
+                                        </label>
                                     </div>
                                     <div className="group">
                                         <input type="TEXT" required className="input" />
                                         <span className="highlight" />
                                         <label className="label">
                                             Last Name
-                                </label>
+                                        </label>
                                     </div>
                                     <div className="group">
                                         <input type="email" required className="input" />
                                         <span className="highlight" />
                                         <label className="label">
                                             Email
-                                </label>
+                                         </label>
                                     </div>
                                     <div className="group">
-                                        <input type="password" required className="input" />
+                                        <input type="password" required className="input" alue={this.pass}
+                                            onChange={(e) => { this.inputPass(e) }} />
                                         <span className="highlight" />
                                         <label className="label">
                                             Password
-                                </label>
+                                        </label>
                                     </div>
                                     <div className="group">
-                                        <input type="password" required className="input" />
+                                        <input type="password" required className="input" value={this.passConfirm}
+                                            onChange={(e) => { this.inputPassConfirm(e) }} />
                                         <span className="highlight" />
                                         <label className="label">
                                             Confirm Password
-                                </label>
+                                         </label>
                                     </div>
-                                    <button className="log-btn">ADD PROFILE DETAILS</button>
-                                    <a><p>Forgot Password</p></a>
-                                    <a><p> Create an account </p></a>
+                                    {this.state.password ?
+                                        <NavLink to="/datauser">
+                                            <button className="findAddress btn btn-primary">ADD PROFILE DETAILS</button>
+                                        </NavLink>
+                                        :
+                                        <button className="findAddress btn btn-primary" disabled>ADD PROFILE DETAILS</button>
+                                    }
                                 </form>
-                                <div className="row">
-                                    <div className="col-md-3 col-sm-3 col-xs-6">
-                                        <a href="http://www.facebook.com" target="_blank" className="btn btn-sm animated-button victoria-four">LOG IN WITH FACEBOOK</a>
-                                    </div>
-                                    <div className="col-md-3 col-sm-3 col-xs-6">
-                                        <a href="http://www.gmail.com" target="_blank" className="btn btn-sm animated-button victoria-four">LOG IN WITH GOOGLE</a>
-                                    </div>
-                                </div>
+                                <ButtonsSocial />
                             </div>
                         </div>
                     </div>

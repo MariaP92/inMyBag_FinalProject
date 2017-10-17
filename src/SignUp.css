@@ -305,7 +305,7 @@ a.animated-button.victoria-four:hover:after {
   position: absolute;
   height: 60%; 
   width: 100px; 
-  top: 25%; 
+  top: 50%; 
   left: 0;
   pointer-events: none;
   opacity: 0.5;

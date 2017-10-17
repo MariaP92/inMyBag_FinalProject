@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import Home from './Home';
+import Howitworks from './Howitworks'
 import DataUser from './DataUser';
 import LogIn from './LogIn';
 import PaymentInformation from './PaymentInformation';
@@ -34,9 +35,10 @@ const App = (props) => {
 				<Route  path="/paymentinformation" render={() => <PaymentInformation model={model} />}/>
       			<Route  path="/paymentinformation2" render={() => <PaymentInformation2 model={model} />}/>
 				<Route  path="/signup" render={() => <SignUp model={model} />}/>
-				<Route  path="/howitworking" render={() => <Howitworking model={model} />}/>
-
+				<Route  path="/howitworks" render={() => <Howitworks model={model} />}/>
 				<Route component={Home}/>
+				
+
 			</Switch>
 		</div>
 	</BrowserRouter>)

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import DatePicker from "react-datepicker";
+import Header from './Header';
 import moment from "moment";
 import "./PaymentInformation.css";
 import "react-datepicker/dist/react-datepicker.css";
@@ -15,11 +16,12 @@ class PaymentInformation2 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showAnual: true,
+      showAnual: false,
       showMonthly: false
     };
   }
   anualButton(e) {
+    console.log('es', e)
     this.setState({
       showAnual: true, 
       showMonthly: false
