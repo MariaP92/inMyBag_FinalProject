@@ -134,8 +134,7 @@ class SignUp extends Component {
                                         :
                                         <button className="findAddress btn btn-primary" disabled>ADD PROFILE DETAILS</button>
                                     }
-                                    <a><p>Forgot Password</p></a>
-                                    <a><p> Create an account </p></a>
+
                                 </form>
                                 <div class="row">
                                     <div class="col-md-3 col-sm-3 col-xs-6">
