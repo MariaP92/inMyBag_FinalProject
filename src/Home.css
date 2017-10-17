@@ -12,6 +12,11 @@ height: 100%;
 font-weight: 400;
 
 }
+.close{
+    color: #f06;
+    margin-right: 10px;
+    margin-top: 10px;
+}
 .mineul{
     position: absolute;
     color :#fff;

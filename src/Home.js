@@ -34,6 +34,13 @@ class Home extends Component {
         console.log(this.productUser);
     }
 
+    closeIt(){
+        this.setState({
+            complete: false
+        })
+    }
+
+
     render() {
         const InsuranceTotal = () => {
             return (
@@ -82,6 +89,7 @@ class Home extends Component {
                 <HeaderMain />
                 <div className="col-lg-6 col-md-6 col-xs-6">
                     {this.state.complete && <div className="input-products">
+                    <label className="close" onClick={(e) => {this.closeIt()}}>X</label>
                         <ProductList />
                         <div className="col-lg-12 col-md-12 col-xs-12">
                             <div className="col-lg-12 col-md-12 col-xs-12">
