@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Home.css';
 import Products from './Products.js'
+import HeaderMain from './HeaderMain'
+
 import {
     BrowserRouter,
     Route,
@@ -21,13 +23,6 @@ class Home extends Component {
             complete: false
         }
     }
-
-    // removeItem(e, id){
-    //     console.log(this.productUser);
-    //     this.productUser.splice(id,1);
-    //     console.log(this.productUser);
-    // }
-
     changeValue(e) {
         let priceInsurance = Products[e.target.value].insurancePrice + this.state.calculateInsurance;
         this.setState({
@@ -43,11 +38,11 @@ class Home extends Component {
         const InsuranceTotal = () => {
             return (
                 <div className="containerTotal">
-                    <div className="row">
-                        <div className="col-md-6 col-sm-6 col-xs-6">
+                    <div className="container-wrapper">
+                        <div className="col-md-12 col-sm-12 col-xs-12">
                             <h4>TOTAL</h4>
                         </div>
-                        <div className="col-md-6 col-sm-6 col-xs-6">
+                        <div className="col-md-12 col-sm-12 col-xs-12">
                             <h4>${this.state.calculateInsurance}</h4>
                         </div>
                     </div>
@@ -58,10 +53,9 @@ class Home extends Component {
         const getProductList = () => {
             return this.productUser.map((product, index) => {
                 return (
-                    <li key={index}>
-                        <div className="divProduct productTitl text-center" >
-                            <img src={product.image} />
-                          
+                    <li>
+                        <div className="divProduct productTitl text-center col-lg-4 col-md-4 col-xs-4">
+                            <img className="img-responsive" src={product.image} />
                             <p>{product.name}</p>
                             <p>{product.brand}</p>
                             <p>${product.price}</p>
@@ -73,7 +67,7 @@ class Home extends Component {
 
         const ProductList = () => {
             return (
-                <div>
+                <div className="product-list row">
                     <ul>{getProductList()}</ul>
                 </div>
             );
@@ -82,45 +76,30 @@ class Home extends Component {
 
         return (
 
-            <div className="container-fluid">
-                <div className="branding col-lg-3 col-md-3 col-xs-3">
-                    <img className="img-responsive" src="https://inmybag.co/images/branding/logo-transparent-white.svg" />
-                </div>
-                <div className="navbar transparent navbar-inverse navbar-static-top hr col-lg-9 col-md-9 col-xs-9">
-                    <div className="container">
-                        <div className="navbar-header">
-                            <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span className="icon-bar"></span>
-                                <span className="icon-bar"></span>
-                                <span className="icon-bar"></span>
-                            </button>
-
-                        </div>
-                        <div className="navbar-collapse collapse header-nav-menu col-lg-7 col-md-7 col-xs-7 ">
-                            <ul className="nav navbar-nav mineul">
-                                <li><NavLink exact to="/howitwork">How it works</NavLink></li>
-                                <li><NavLink exact to="/blog">BLog</NavLink></li>
-                                <li><NavLink exact to="/login">Log In</NavLink></li>
-                                <li><NavLink exact to="/signup">Sign Up</NavLink></li>
-                                <li><NavLink exact to="/bag">Bag({0})</NavLink></li>
-                            </ul>
-                        </div>
-                    </div>
+            <div className="container-fluid background">
+                    <HeaderMain/>
                     <div className="col-lg-6 col-md-6 col-xs-6">
                         {this.state.complete && <div className="input-products">
                             <ProductList />
-                            <InsuranceTotal />
+                            <div className="col-lg-12 col-md-12 col-xs-12">
+                                <div className="col-lg-12 col-md-12 col-xs-12">
+                                    <InsuranceTotal />
+                                </div>
+                                <div className="col-lg-12 col-md-12 col-xs-12">
+                                    <button>Insurance Me</button>
+                                </div>
+                            </div>
                         </div>
                         }
                     </div>
-                </div>
-                <div className="trapecio">
+                <div className="trapezium">
                     <section className="search-product margin-top-xl">
-                        <h1 id="add-items-header" className="white-text"><span>You need your tech.&nbsp;</span>
-                            <span>We get it.</span></h1>
-                        <h2>InMyBag is super high-speed insurance because life doesn't wait</h2>
-                        <div>
-                            <Col sm={5} md={5} xs={5}>
+                        <h1 id="add-items-header" className="white-text">
+                            <label>You need your tech.&nbsp;</label>
+                            <label>We get it.</label></h1>
+                        <h2 id="add-items-headerh2">InMyBag is super high-speed insurance because life doesn't wait</h2>
+                        <div className="dropdown">
+                            <Col sm={9} md={9} xs={9}>
                                 <FormControl componentClass="select" placeholder="select" onChange={(e) => { this.changeValue(e) }}>
                                     <option value="">Seleccione Producto</option>
                                     {Products.map((pro, index) => {
