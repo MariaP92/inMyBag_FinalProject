@@ -21,6 +21,13 @@ class Home extends Component {
             complete: false
         }
     }
+
+    // removeItem(e, id){
+    //     console.log(this.productUser);
+    //     this.productUser.splice(id,1);
+    //     console.log(this.productUser);
+    // }
+
     changeValue(e) {
         let priceInsurance = Products[e.target.value].insurancePrice + this.state.calculateInsurance;
         this.setState({
@@ -51,9 +58,10 @@ class Home extends Component {
         const getProductList = () => {
             return this.productUser.map((product, index) => {
                 return (
-                    <li>
-                        <div className="divProduct productTitl text-center">
+                    <li key={index}>
+                        <div className="divProduct productTitl text-center" >
                             <img src={product.image} />
+                          
                             <p>{product.name}</p>
                             <p>{product.brand}</p>
                             <p>${product.price}</p>

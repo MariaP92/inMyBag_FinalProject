@@ -12,6 +12,12 @@ height: 100%;
 font-weight: 400;
 
 }
+
+.itemremove{
+    margin-right: 0px;
+    margin-top: 0px;
+}
+
 .containerTotal{
     color: #333;
 }
@@ -69,7 +75,7 @@ font-weight: 400;
     width: 50%;
     min-width: 285px; 
     border-right: 109px solid transparent;
-    border-bottom: 900px solid #F00B7A;
+    border-bottom: 900px solid #F00B57;
 }
 .search-product{
     position: absolute;
