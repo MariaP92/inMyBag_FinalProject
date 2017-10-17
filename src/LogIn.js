@@ -16,7 +16,7 @@ class LogIn extends Component {
                     <div className="registerInner">
                         <div className="col-md-6 signUp">
                             <div className="form">
-                                <h1>LogIn</h1>
+                                <h1 className="grey-text">LogIn</h1>
                                 <form>
                                     <div className="group">
                                         <input type="email" required className="input" />
@@ -33,9 +33,11 @@ class LogIn extends Component {
                                   </label>
                                     </div>
                                     <button className="log-btn btn-primary btn">LOG IN</button>
-                                    <div className="text-center">
+                                    <div >
                                         <a><p>Forgot Password</p></a>
-                                        <a><p> Create an account </p></a>
+                                        <NavLink to="/signup">
+                                            <a><p> Create an account </p></a>
+                                        </NavLink>
                                     </div>
                                 </form>
                                 <div className="row">
