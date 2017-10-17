@@ -2,6 +2,7 @@
   "name": "inmybagproject",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mariap92.github.io/inMyBag_FinalProject",
   "dependencies": {
     "react": "^16.0.0",
     "react-bootstrap": "^0.31.3",
