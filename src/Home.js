@@ -55,7 +55,7 @@ class Home extends Component {
                 return (
                     <li>
                         <div className="divProduct productTitl text-center col-lg-4 col-md-4 col-xs-4">
-                            <img src={product.image} />
+                            <img className="img-responsive" src={product.image} />
                             <p>{product.name}</p>
                             <p>{product.brand}</p>
                             <p>${product.price}</p>
@@ -81,14 +81,22 @@ class Home extends Component {
                     <div className="col-lg-6 col-md-6 col-xs-6">
                         {this.state.complete && <div className="input-products">
                             <ProductList />
-                            <InsuranceTotal />
+                            <div className="col-lg-12 col-md-12 col-xs-12">
+                                <div className="col-lg-12 col-md-12 col-xs-12">
+                                    <InsuranceTotal />
+                                </div>
+                                <div className="col-lg-12 col-md-12 col-xs-12">
+                                    <button>Insurance Me</button>
+                                </div>
+                            </div>
                         </div>
                         }
                     </div>
-                <div className="trapecio">
+                <div className="trapezium">
                     <section className="search-product margin-top-xl">
-                        <h1 id="add-items-header" className="white-text"><span>You need your tech.&nbsp;</span>
-                            <span>We get it.</span></h1>
+                        <h1 id="add-items-header" className="white-text">
+                            <label>You need your tech.&nbsp;</label>
+                            <label>We get it.</label></h1>
                         <h2>InMyBag is super high-speed insurance because life doesn't wait</h2>
                         <div>
                             <Col sm={5} md={5} xs={5}>

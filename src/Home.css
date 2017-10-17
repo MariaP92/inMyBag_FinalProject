@@ -22,17 +22,12 @@ font-weight: 400;
 
 .header {
     text-align: center;
+    margin-top: 2em;
     z-index: 100;
     width: 100%;
-    min-width: 304px;
     position: fixed;
 }
-.container {
-    padding-right: 15px;
-    padding-left: 30%;
-    margin-right: auto;
-    margin-left: auto;
-}
+
 .branding {
     position: absolute;
     top: 36%;
@@ -42,19 +37,31 @@ font-weight: 400;
 }
 .header-nav-menu {
     position: relative;
-    margin: 2px 0;
-    left: 0;
+    left: 18%;
 }
-.header-nav-menu li {
+.header-nav-menu li{
     padding: 12px;
     padding-top: 14px;
     display: inline-block;
     cursor: pointer;
     font-size: 1em;
 }
-.trapecio {
+
+.header-nav-menu li a{
+    font-weight: 1em;
+    color: #ffffff;
+    text-decoration: none;
+}
+.navbar-brand {
+    float: left;
+    height: 4em;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+.trapezium {
     position: relative;
-    border: 0 px solid;
+    text-align: center;
     left: -5%;
     width: 50%;
     min-width: 220px;
@@ -104,11 +111,13 @@ font-weight: 400;
     z-index: 1000;
     margin-left: 10px;
     margin-left: 17px;
+    text-align: center;
 }
 
 .productTitl{
     color: #222222;
     font-size: 14px;
+    margin-top: 4vh;
 }
 
 .productTitl img{
