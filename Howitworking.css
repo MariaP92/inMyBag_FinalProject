@@ -1,0 +1,8 @@
+.hr-dark {
+    background: #ddd;
+}
+
+.hr, .hr-dark {
+    width: 100%;
+    height: 1px;
+}

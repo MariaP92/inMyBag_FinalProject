@@ -5,6 +5,7 @@ import DataUser from './DataUser';
 import LogIn from './LogIn';
 import PaymentInformation from './PaymentInformation';
 import PaymentInformation2 from './PaymentInformation2';
+import Howitworking from './Howitworking.js';
 import SignUp from './SignUp';
 import {
 	BrowserRouter,
@@ -33,6 +34,8 @@ const App = (props) => {
 				<Route  path="/paymentinformation" render={() => <PaymentInformation model={model} />}/>
       			<Route  path="/paymentinformation2" render={() => <PaymentInformation2 model={model} />}/>
 				<Route  path="/signup" render={() => <SignUp model={model} />}/>
+				<Route  path="/howitworking" render={() => <Howitworking model={model} />}/>
+
 				<Route component={Home}/>
 			</Switch>
 		</div>

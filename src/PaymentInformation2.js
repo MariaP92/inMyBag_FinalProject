@@ -11,18 +11,15 @@ import {
   NavLink
 } from "react-router-dom";
 
-("use strict");
-
 class PaymentInformation2 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showAnual: false,
+      showAnual: true,
       showMonthly: false
     };
   }
   anualButton(e) {
-    console.log('es', e)
     this.setState({
       showAnual: true, 
       showMonthly: false

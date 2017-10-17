@@ -42,7 +42,7 @@ class Quiz extends React.Component {
                     </div>
                     <div className="navbar-collapse collapse header-nav-menu col-lg-7 col-md-7 col-xs-7 ">
                         <ul className="nav navbar-nav mineul">
-                        <li><NavLink exact to="/howitwork">How it works</NavLink></li>
+                        <li><NavLink exact to="/howitworking">How it works</NavLink></li>
                         <li><NavLink exact to="/blog">BLog</NavLink></li>
                         <li><NavLink exact to="/login">Log In</NavLink></li>
                         <li><NavLink exact to="/signup">Sign Up</NavLink></li>
