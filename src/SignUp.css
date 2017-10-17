@@ -125,7 +125,9 @@ a.animated-button.victoria-four:hover:after {
 .google-plus span {
 	background-color: #db5a3c;
 }
-
+.body{
+  background-color: #db5a3c;
+}
 /* Icons */
 .icon-button i {
 	background: none;
@@ -165,7 +167,6 @@ a.animated-button.victoria-four:hover:after {
   padding: 0;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  background: #FDFDFD;
 }
 
 .body.menu-active .container {

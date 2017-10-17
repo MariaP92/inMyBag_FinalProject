@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import Header from './Header';
 import './SignUp.css';
 import {
     BrowserRouter,
@@ -81,7 +82,9 @@ class SignUp extends Component {
             );
         }
         return (
-
+            <div>
+                <Header />
+           
             <div className="body">
 
                 <div className="row col-md-8 col-md-offset-2 registeration pageaccount">
@@ -148,7 +151,7 @@ class SignUp extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> </div>
         );
     }
 }

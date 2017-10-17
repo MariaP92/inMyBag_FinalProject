@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './DataUser.css';
 import DatePicker from 'react-datepicker';
+import Header from './Header';
 import moment from 'moment';
 import {
     BrowserRouter,
@@ -54,13 +55,13 @@ class DataUser extends Component {
                     completed: false
                 });
             }
-            else{
+            else {
                 this.setState({
                     completed: true
                 });
             }
         }
-        
+
         const FormAdd = () => {
             return (
                 <div className="form-group">
@@ -112,83 +113,85 @@ class DataUser extends Component {
             );
         }
         return (
-            <div className="row col-md-8 col-md-offset-2 registeration pageaccount">
-                <div className="registerInner">
-                    <div className="col-md-6 signUp">
-                        <BarProgress />
-                        <hr />
-                        <form action="" method="post" >
-                            <div className="form-group">
-                                <label for="birthday" className="grey-text left">DATE OF BIRTH</label><br />
-                            </div>
-                            <DatePicker
-                                className="form-control"
-                                selected={this.state.startDate}
-                                onChange={this.handleChange}
-                            />
-                            <div className="form-group">
-                                <div></div>
-                            </div>
-                            <div className="form-group">
-                                <input className="form-control" type="tel" name="phoneNum" id="phoneNum" data-validation="number"
-                                    maxLength={9} placeholder="PHONE NUMBER" pattern=".{9,}"
-                                    title="9 números o menos"
+            <div>
+                <Header />
+                <div className="row col-md-8 col-md-offset-2 registeration pageaccount">
+                    <div className="registerInner">
+                        <div className="col-md-6 signUp">
+                            <BarProgress />
+                            <hr />
+                            <form action="" method="post" >
+                                <div className="form-group">
+                                    <label for="birthday" className="grey-text left">DATE OF BIRTH</label><br />
+                                </div>
+                                <DatePicker
+                                    className="form-control"
+                                    selected={this.state.startDate}
+                                    onChange={this.handleChange}
+                                />
+                                <div className="form-group">
+                                    <div></div>
+                                </div>
+                                <div className="form-group">
+                                    <input className="form-control" type="tel" name="phoneNum" id="phoneNum" data-validation="number"
+                                        maxLength={9} placeholder="PHONE NUMBER" pattern=".{9,}"
+                                        title="9 números o menos"
 
-                                    required />
-                            </div>
-                            <div className="form-group">
-                                <input class="form-control" type="text" name="occupation" id="occupation" placeholder="OCCUPATION"  required />
-                            </div>
-                            <div className="form-group">
-                                <label for="address" className="grey-text left">YOUR ADDRESS</label><br />
-                                <div className="row">
-                                    <div className="col-md-6 col-sm-12 col-xs-12">
-                                        <input className="form-control" type="text" name="postcode" id="address" placeholder="PostCode"  onChange={onInputChange}  required />
-                                    </div>
-                                    <div className="col-md-6 col-sm-12 col-xs-12">
-                                        <button className="findAddress btn btn-primary">FIND ADDRESS</button>
+                                        required />
+                                </div>
+                                <div className="form-group">
+                                    <input class="form-control" type="text" name="occupation" id="occupation" placeholder="OCCUPATION" required />
+                                </div>
+                                <div className="form-group">
+                                    <label for="address" className="grey-text left">YOUR ADDRESS</label><br />
+                                    <div className="row">
+                                        <div className="col-md-6 col-sm-12 col-xs-12">
+                                            <input className="form-control" type="text" name="postcode" id="address" placeholder="PostCode" onChange={onInputChange} required />
+                                        </div>
+                                        <div className="col-md-6 col-sm-12 col-xs-12">
+                                            <button className="findAddress btn btn-primary">FIND ADDRESS</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            {this.state.manualAdd &&
-                                <form action="" method="post" >
-                                    <div className="form-group">
-                                        <input class="form-control" type="text" name="country" id="country" placeholder="Country"  required />
+                                {this.state.manualAdd &&
+                                    <form action="" method="post" >
+                                        <div className="form-group">
+                                            <input class="form-control" type="text" name="country" id="country" placeholder="Country" required />
+                                        </div>
+                                        <div className="form-group">
+                                            <input class="form-control" type="text" name="country" id="country" placeholder="Address line 1" required />
+                                        </div>
+                                        <div className="form-group">
+                                            <input class="form-control" type="text" name="country" id="country" placeholder="Address line 2" required />
+                                        </div>
+                                        <div className="form-group">
+                                            <input class="form-control" type="text" name="country" id="country" placeholder="City" required />
+                                        </div>
+                                        <div className="form-group">
+                                            <input class="form-control" type="text" name="country" id="country" placeholder="Postcode" onChange={onInputChange} required />
+                                        </div>
+                                        <a className="manualAddress" onClick={(e) => { this.hideManualAdd(e) }}>Address lookup</a>
+                                    </form>
+                                }
+                                {!this.state.manualAdd &&
+                                    <div>
+                                        <a className="manualAddress" onClick={(e) => { this.showManualAdd(e) }}>Enter address manually</a><br />
                                     </div>
-                                    <div className="form-group">
-                                        <input class="form-control" type="text" name="country" id="country" placeholder="Address line 1"   required />
-                                    </div>
-                                    <div className="form-group">
-                                        <input class="form-control" type="text" name="country" id="country" placeholder="Address line 2"  required />
-                                    </div>
-                                    <div className="form-group">
-                                        <input class="form-control" type="text" name="country" id="country" placeholder="City" required />
-                                    </div>
-                                    <div className="form-group">
-                                        <input class="form-control" type="text" name="country" id="country" placeholder="Postcode"  onChange={onInputChange} required />
-                                    </div>
-                                    <a className="manualAddress" onClick={(e) => { this.hideManualAdd(e) }}>Address lookup</a>
-                                </form>
-                            }
-                            {!this.state.manualAdd &&
-                                <div>
-                                    <a className="manualAddress" onClick={(e) => { this.showManualAdd(e) }}>Enter address manually</a><br />
-                                </div>
-                            }
+                                }
 
-                            {
-                                this.state.completed ?
-                                    <NavLink
-                                        to="/paymentinformation">
-                                        <button type="submit" className="signbuttons btn btn-primary" >ADD PROFILE DETAILS</button>
-                                    </NavLink > :
-                                    <button type="submit" className="signbuttons btn btn-primary disabled" >ADD PROFILE DETAILS</button>
-                            }
-                        </form>
+                                {
+                                    this.state.completed ?
+                                        <NavLink
+                                            to="/paymentinformation">
+                                            <button type="submit" className="signbuttons btn btn-primary" >ADD PROFILE DETAILS</button>
+                                        </NavLink > :
+                                        <button type="submit" className="signbuttons btn btn-primary disabled" >ADD PROFILE DETAILS</button>
+                                }
+                            </form>
+                        </div>
+
                     </div>
-
                 </div>
-
             </div>
         );
     }

@@ -86,7 +86,9 @@ class Home extends Component {
                                     <InsuranceTotal />
                                 </div>
                                 <div className="col-lg-12 col-md-12 col-xs-12">
-                                    <button>Insurance Me</button>
+                                    <NavLink to="/signup">
+                                        <button>Insurance Me</button>
+                                    </NavLink>
                                 </div>
                             </div>
                         </div>

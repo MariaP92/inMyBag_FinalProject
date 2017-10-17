@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import DatePicker from "react-datepicker";
+import Header from './Header';
 import moment from "moment";
 import "./PaymentInformation.css";
 import "react-datepicker/dist/react-datepicker.css";

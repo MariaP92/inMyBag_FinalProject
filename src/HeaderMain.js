@@ -4,15 +4,15 @@ import Products from './Products.js'
 import {NavLink} from 'react-router-dom'
 import { Form, FormGroup, FormControl, Col, Grid, Row, ControlLabel, Button, Radio } from 'react-bootstrap';
 
-class Header extends Component {
+class HeaderMain extends Component {
     render(){
         return(  
             <div className="header">
                 <nav className="navbar navbar-light bg-faded">
                     <div className="col-lg-1 col-md-1 col-xs-1">
-                        <img className="navbar-brand"src="https://inmybag.co/images/branding/logo-fill.svg"/>
+                        <img className="navbar-brand"src="https://inmybag.co/images/branding/logo-transparent-white.svg"/>
                     </div>
-                    <div className="header-nav-menu-no col-lg-11 col-md-11 col-xs-11">
+                    <div className="header-nav-menu col-lg-11 col-md-11 col-xs-11">
                         <div className=" col-lg-8 col-md-8 col-xs-8 ">
                             <ul className=" col-lg-12 col-md-12 col-xs-12 ">
                                 <li className=" col-lg-3 col-md-3 col-xs-3 "><NavLink exact to="/howitwork">How it works</NavLink></li>
@@ -33,4 +33,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default HeaderMain;
