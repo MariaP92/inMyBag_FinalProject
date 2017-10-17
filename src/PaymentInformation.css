@@ -130,16 +130,6 @@ label.upload-button {
 
 input:not([type]),
 input[type=color],
-input[type=date],
-input[type=datetime-local],
-input[type=datetime],
-input[type=email],
-input[type=file],
-input[type=month],
-input[type=number],
-input[type=password],
-input[type=search],
-input[type=tel],
 input[type=text],
 input[type=time],
 input[type=url],
@@ -192,7 +182,7 @@ textarea {
     align-items: center;
     align-content: center;
     flex-direction: column;
-    background: rgb(179, 125, 179);
+    background:#ff4b93;
     color: #fff;
     border-right: 1px solid;
     font-size: .9em;
@@ -203,16 +193,8 @@ textarea {
 }
 */
 .choosePaymentMethod label:active {
-   background: rgb(203, 44, 197);
+   background: #ff0066;
 } 
-
-.billing-schedule-wrap p, .crashplan-wrap p {
-    color: #555;
-}
-.billing-schedule-wrap p, .crashplan-wrap p, .discount-wrap p {
-    font-size: .9em;
-}
-
 
 .button-full-width, label.upload-button-full-width {
     width: 100%;
