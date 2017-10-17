@@ -1,28 +1,49 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './SignUp.css';
+import {
+    BrowserRouter,
+    Route,
+    Switch,
+    Redirect,
+    NavLink
+} from 'react-router-dom'
 
 
 class SignUp extends Component {
     constructor(props) {
         super(props);
+        this.pass = undefined,
+        this.passConfirm = undefined,
         this.state={
             password: false
         }
     }
 
-    // comparePassword(){
-    //     if(==){
-    //         this.setState({
-    //             password:true
-    //         });
-    //     }
-    //     else{
-    //         this.setState({
-    //             password:false
-    //         });
-    //     }
-    // }
+    inputPass(e){
+        console.log(e.target.value);
+        this.pass = e.target.value;
+        this.comparePassword();
+    }
+
+    inputPassConfirm(e){
+        console.log(e.target.value);
+        this.passConfirm = e.target.value;
+        this.comparePassword();
+    }
+
+    comparePassword(){
+        if(this.pass===this.passConfirm){
+            this.setState({
+                password:true
+            });
+        }
+        else{
+            this.setState({
+                password:false
+            });
+        }
+    }
 
     render() {
         const BarProgress = () => {
@@ -91,20 +112,28 @@ class SignUp extends Component {
                                 </label>
                                     </div>
                                     <div className="group">
-                                        <input type="password" required className="input" />
+                                        <input type="password" required className="input" value={this.pass}
+                                        onChange={(e) => { this.inputPass(e) }} />
                                         <span className="highlight" />
                                         <label className="label">
                                             Password
                                 </label>
                                     </div>
                                     <div className="group">
-                                        <input type="password" required className="input" />
+                                        <input type="password" required className="input" value={this.passConfirm}
+                                        onChange={(e) => { this.inputPassConfirm(e) }} />
                                         <span className="highlight" />
                                         <label className="label">
                                             Confirm Password
-                                </label>
+                                        </label>
                                     </div>
-                                    <button className="log-btn">ADD PROFILE DETAILS</button>
+                                    {this.state.password ?
+                                        <NavLink to="/datauser">
+                                            <button className="findAddress btn btn-primary">ADD PROFILE DETAILS</button>
+                                        </NavLink>
+                                        :
+                                        <button className="findAddress btn btn-primary" disabled>ADD PROFILE DETAILS</button>
+                                    }
                                     <a><p>Forgot Password</p></a>
                                     <a><p> Create an account </p></a>
                                 </form>
