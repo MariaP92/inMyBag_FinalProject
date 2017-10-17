@@ -88,17 +88,18 @@
   .form-group{
       width: 100%;
       line-height: 50px;   
+      
   }
   
   .signbuttons{
       margin-bottom: 35px;
   }
   
-  input{
+.form-control{
       border-top: none !important;
       border-right: none !important;
       border-left: none !important;
-      border-bottom: 1px #888888 !important;
+      border-bottom: 1px dotted #C90E4F !important;
       box-shadow: none !important;
       -webkit-box-shadow: none !important;
       -moz-box-shadow: none !important;

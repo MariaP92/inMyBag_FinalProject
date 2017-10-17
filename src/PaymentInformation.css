@@ -1,6 +1,7 @@
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 
+@media (max-width: <SIZE>px) { .card-wrapper {} }
 
 .group { 
   position: relative; 
@@ -256,6 +257,8 @@ textarea {
   }
   
   
+  
+  
   .form-group{
       width: 100%;
       line-height: 50px;   
@@ -283,3 +286,14 @@ textarea {
       text-align: center;
   }
   
+  .form-control{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-bottom: 1px dotted #C90E4F !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -moz-transition: none !important;
+    -webkit-transition: none !important;
+}

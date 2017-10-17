@@ -86,7 +86,7 @@ class SignUp extends Component {
 
         const ButtonsSocial = () => {
             return (
-                <div className="row">
+                <div className="row btns">
                     <div>
                         <div className="col-lg-6 col-xs-12">
                             <a href="http://www.facebook.com" target="_blank" className="a1">
@@ -131,28 +131,28 @@ class SignUp extends Component {
                                     <BarProgress />
                                     <form>
                                         <div className="group">
-                                            <input type="text" required className="input" />
+                                            <input type="text" required className="input form-control" />
                                             <span className="highlight" />
                                             <label className="label">
                                                 First Name
                                         </label>
                                         </div>
                                         <div className="group">
-                                            <input type="TEXT" required className="input" />
+                                            <input type="TEXT" required className="input form-control" />
                                             <span className="highlight" />
                                             <label className="label">
                                                 Last Name
                                         </label>
                                         </div>
                                         <div className="group">
-                                            <input type="email" required className="input" />
+                                            <input type="email" required className="input form-control" />
                                             <span className="highlight" />
                                             <label className="label">
                                                 Email
                                          </label>
                                         </div>
                                         <div className="group">
-                                            <input type="password" required className="input" alue={this.pass}
+                                            <input type="password" required className="input form-control" alue={this.pass}
                                                 onChange={(e) => { this.inputPass(e) }} />
                                             <span className="highlight" />
                                             <label className="label">
@@ -160,7 +160,7 @@ class SignUp extends Component {
                                         </label>
                                         </div>
                                         <div className="group">
-                                            <input type="password" required className="input" value={this.passConfirm}
+                                            <input type="password" required className="input form-control" value={this.passConfirm}
                                                 onChange={(e) => { this.inputPassConfirm(e) }} />
                                             <span className="highlight" />
                                             <label className="label">

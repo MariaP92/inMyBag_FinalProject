@@ -22,14 +22,14 @@ class LogIn extends Component {
                                     <h1 className="grey-text">LogIn</h1>
                                     <form>
                                         <div className="group">
-                                            <input type="email" required className="input" />
+                                            <input type="email" required className="input form-control" />
                                             <span className="highlight" />
                                             <label className="label">
                                                 Email
                                   </label>
                                         </div>
                                         <div className="group">
-                                            <input type="password" required className="input" />
+                                            <input type="password" required className="input form-control" />
                                             <span className="highlight" />
                                             <label className="label">
                                                 Password
@@ -43,7 +43,7 @@ class LogIn extends Component {
                                             </NavLink>
                                         </div>
                                     </form>
-                                    <div className="row">
+                                    <div className="row btns">
                                         <div>
                                             <div className="col-lg-6 col-xs-12">
                                                 <a href="http://www.facebook.com" target="_blank" className="a1">

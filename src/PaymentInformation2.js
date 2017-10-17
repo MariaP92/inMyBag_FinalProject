@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import DatePicker from "react-datepicker";
 import Header from "./Header";
 import moment from "moment";
+import React from 'react';
+import Plastic from 'react-plastic';
 import "./PaymentInformation.css";
 import "react-datepicker/dist/react-datepicker.css";
 import {
@@ -11,6 +13,14 @@ import {
   Redirect,
   NavLink
 } from "react-router-dom";
+export const ShowCard = () => (
+  <Plastic
+    type="amex"
+    name="Peter Sagan"
+    expiry="10/20"
+    number="444466666655555"
+    cvc="3333"
+  />);
 
 class PaymentInformation2 extends Component {
   constructor(props) {
@@ -38,6 +48,7 @@ class PaymentInformation2 extends Component {
       showAnual: false
     });
   }
+  
   payMoney(e) {
     this.setState({
       showPay: true
@@ -99,6 +110,7 @@ class PaymentInformation2 extends Component {
           <BarProgress />
 
           <form className="form">
+          <ShowCard/> 
             <div>
               <div>
                 <div className="margin-top ng-valid ng-valid-maxlength ng-valid-pattern ng-dirty ng-valid-parse">
