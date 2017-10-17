@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-.container-fluid {
-background-image: url('https://i.ytimg.com/vi/pNSKQ9Qp36M/maxresdefault.jpg');
+.background {
+background-image: url('https://c1.staticflickr.com/4/3791/10851397194_32e201553a_b.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 color: #ffffff;
@@ -12,61 +12,67 @@ height: 100%;
 font-weight: 400;
 
 }
+.mineul{
+    position: absolute;
+    color :#fff;
+}
+.containerTotal{
+    color: #333;
+}
 
-#header{
-    color :white;
+.header {
     text-align: center;
+    margin-top: 2em;
     z-index: 100;
     width: 100%;
-    min-width: 304px;
-    position: relative;
+    position: fixed;
 }
-.container {
-    padding-right: 15px;
-    padding-left: 30%;
-    margin-right: auto;
-    margin-left: auto;
-}
+
 .branding {
-    float: left;
-    position: relative;
-    padding: 15px;
-    width: 20%;
-    left: 10%;
-    z-index: 5000;
-    
-}
-.navbar {
     position: absolute;
-    background-color:transparent !important;
-    border-color:transparent;
-    background-image:none;
-    box-shadow:none;  
+    top: 36%;
+    width: 10%;
+    left: 5%;
+    
 }
 .header-nav-menu {
     position: relative;
-    margin: 2px 0;
-    left: 0;
+    left: 18%;
 }
-.header-nav-menu li {
+.header-nav-menu li{
     padding: 12px;
     padding-top: 14px;
     display: inline-block;
     cursor: pointer;
     font-size: 1em;
 }
-.mineul{
-    font-size:17px;
-    margin-top:9px; 
-    color:white;
+
+.header-nav-menu li a{
+    font-weight: 1em;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
 }
-.trapecio {
+.header-nav-menu-no li a {
+    font-weight: 1em;
+    color: #f06;
+    text-decoration: none;
+}
+.navbar-brand {
+    float: left;
+    height: 4em;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+.trapezium {
     position: relative;
-    left: -3%;
+    text-align: center;
+    left: -5%;
     width: 50%;
-    min-width: 285px; 
+    min-width: 220px;
     border-right: 109px solid transparent;
-    border-bottom: 900px solid #F00B7A;
+    border-bottom: 900px solid #f06;
 }
 .search-product{
     position: absolute;
@@ -79,7 +85,14 @@ font-weight: 400;
 }
 #add-items-header {
     font-size: 1.8em;
-    margin: 0 0 10px;
+    margin: 2em 2em 2em 2em;
+    text-align: left;
+}
+#add-items-headerh2{
+    position: relative;
+    left: 11%;
+    font-size: 1.5em;
+    font-weight: bold;
     text-align: left;
 }
 .main-item-search{
@@ -100,4 +113,31 @@ font-weight: 400;
     padding: 15px;
     font-size: 1.2em;
     font-weight: 300;
+}
+.input-products {
+    overflow: hidden;
+    position: absolute;
+    left: 85%;
+    width: 115%;
+    height: 900px;
+    background-color: #fff;
+    z-index: 1000;
+    margin-left: 10px;
+    margin-left: 17px;
+    text-align: center;
+}
+
+.productTitl{
+    color: #222222;
+    font-size: 14px;
+    margin-top: 4vh;
+}
+
+.productTitl img{
+    height: 100px;
+} 
+.dropdown{
+    position: relative;
+    margin-top: 4em;
+    left: 7%;
 }

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import './App.css';
+//import './App.css';
 import Home from './Home';
+import Howitworking from './Howitworking'
 import DataUser from './DataUser';
 import LogIn from './LogIn';
 import PaymentInformation from './PaymentInformation';
@@ -35,6 +36,8 @@ const App = (props) => {
         <Route  path="/paymentinformation2" render={() => <PaymentInformation2 model={model} />}/>
 				<Route  path="/signup" render={() => <SignUp model={model} />}/>
 				<Route component={Home}/>
+				<Route  path="/howitworking" render={() => <Howitworking model={model} />}/>
+
 			</Switch>
 		</div>
 	</BrowserRouter>)
