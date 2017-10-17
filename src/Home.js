@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Home.css';
 import Products from './Products.js'
-import Header from './Header'
+import HeaderMain from './HeaderMain'
 
 import {
     BrowserRouter,
@@ -77,7 +77,7 @@ class Home extends Component {
         return (
 
             <div className="container-fluid background">
-                    <Header/>
+                    <HeaderMain/>
                     <div className="col-lg-6 col-md-6 col-xs-6">
                         {this.state.complete && <div className="input-products">
                             <ProductList />
@@ -97,9 +97,9 @@ class Home extends Component {
                         <h1 id="add-items-header" className="white-text">
                             <label>You need your tech.&nbsp;</label>
                             <label>We get it.</label></h1>
-                        <h2>InMyBag is super high-speed insurance because life doesn't wait</h2>
-                        <div>
-                            <Col sm={5} md={5} xs={5}>
+                        <h2 id="add-items-headerh2">InMyBag is super high-speed insurance because life doesn't wait</h2>
+                        <div className="dropdown">
+                            <Col sm={9} md={9} xs={9}>
                                 <FormControl componentClass="select" placeholder="select" onChange={(e) => { this.changeValue(e) }}>
                                     <option value="">Seleccione Producto</option>
                                     {Products.map((pro, index) => {
