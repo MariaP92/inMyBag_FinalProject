@@ -17,6 +17,11 @@
   font-family: 'Passion One', cursive; 
 }
 
+.btns{
+  margin-bottom: 30px;
+  margin-left: -60px;
+}
+
 .log-btn{
   margin-top: 30px;
   margin-bottom: 20px;
