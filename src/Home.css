@@ -48,13 +48,13 @@ font-weight: 400;
 }
 
 .header-nav-menu li a{
-    font-weight: 1em;
     color: #ffffff;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 .header-nav-menu-no li a {
-    font-weight: 1em;
+    font-size: 1.2em;
     color: #f06;
     text-decoration: none;
 }
@@ -135,6 +135,7 @@ font-weight: 400;
 
 .productTitl img{
     height: 100px;
+    margin: auto;
 } 
 .dropdown{
     position: relative;
