@@ -86,18 +86,6 @@ class PaymentInformation extends Component {
         </signup-progress-bar>
       );
     };
-    const bottonContinue = () => {
-      if (this.state.checked == true) {
-        alert("marcado");
-      } else {
-        alert("no marcado");
-      }
-    };
-    const inputChecked = e => {
-      this.setState({
-        check: true
-      });
-    };
     return (
       <div className="row col-md-8 col-md-offset-2 registeration pageaccount">
         <div className="registerInner">
@@ -124,7 +112,7 @@ class PaymentInformation extends Component {
                 <span className="bolder">
                   I have no unspent criminal convictions
                 </span>
-                <a href="#" ng-click="confirm.readText =! confirm.readText">
+                <a href="#"className="a" >
                   Read more
                 </a>
               </li>
@@ -138,7 +126,9 @@ class PaymentInformation extends Component {
                 <span className="bolder">
                   I have proof of ownership for the devices I am covering
                 </span>{" "}
-                <a href="#">Read more</a>
+                <a className="a"
+                 href="#">Read more
+                 </a>
               </li>
               <li>
                 <span className="bolder">
@@ -216,12 +206,9 @@ class PaymentInformation extends Component {
               }
             </div>
           </div>
-          {/* <NextPart/> */}
         </div>
       </div>
     );
   }
 }
-// onClick={this.state.check? alert('esta checked'): alert('no esta checked')
-
 export default PaymentInformation;
