@@ -96,13 +96,13 @@ class PaymentInformation2 extends Component {
           <div>
             <div>
               <div className="margin-top ng-valid ng-valid-maxlength ng-valid-pattern ng-dirty ng-valid-parse">
-                <div className="form-group">
-                  <input yar type="text" name="cardname" id="cardname" placeholder="NAME ON CARD" required />
-                  <input type="text" name="CardNo" placeholder="Card Number" autoComplete="off" className="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty" aria-invalid="false" />
-                  <input type="text" name="SecurityNo" placeholder="Security Code" maxLength={4} autoComplete="off" className="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty ng-valid-maxlength" aria-invalid="false" />
-                  <input type="text" name="ExpMonth" maxLength={2} placeholder="Expiry Month" className="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty ng-valid-pattern ng-valid-maxlength" aria-invalid="false" />
-                  <input type="text" name="ExpYear" maxLength={2} placeholder="Expiry Year" className="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty ng-valid-pattern ng-valid-maxlength" aria-invalid="false" />
-                </div>
+               
+                  <input className="form-control" yar type="text" name="cardname" id="cardname" placeholder="NAME ON CARD" required />
+                  <input className="form-control" type="text" name="CardNo" placeholder="CARD NUMBER" />
+                  <input className="form-control" type="text" name="SecurityNo" placeholder="SECURITY CODE" maxLength={4}  />
+                  <input className="form-control" type="text" name="ExpMonth" maxLength={2} placeholder="EXPIRY MONTH"  />
+                  <input className="form-control" type="text" name="ExpYear" maxLength={2} placeholder="ECPIRY YEAR"  />
+               
               </div>
               <div className="clear" />
               <span className="bolder pri">
