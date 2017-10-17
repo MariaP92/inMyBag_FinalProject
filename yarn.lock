@@ -5302,7 +5302,6 @@ react-prop-types@^0.4.0:
   dependencies:
     warning "^3.0.0"
 
-<<<<<<< HEAD
 react-router-dom@^4.2.2:
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-4.2.2.tgz#c8a81df3adc58bba8a76782e946cbd4eae649b8d"
@@ -5314,8 +5313,6 @@ react-router-dom@^4.2.2:
     react-router "^4.2.0"
     warning "^3.0.0"
 
-=======
->>>>>>> e6f19f50ab6afe5a6f2296c11dac1a10dae44385
 react-router@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/react-router/-/react-router-4.2.0.tgz#61f7b3e3770daeb24062dae3eedef1b054155986"
