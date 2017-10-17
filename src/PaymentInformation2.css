@@ -12,9 +12,6 @@ height: 100%;
 font-weight: 400;
 
 }
-.containerTotal{
-    color: #333;
-}
 
 #header{
     color :white;
@@ -103,24 +100,4 @@ font-weight: 400;
     padding: 15px;
     font-size: 1.2em;
     font-weight: 300;
-}
-.input-products {
-    overflow: hidden;
-    position: absolute;
-    left: 150%;
-    width: 115%;
-    height: 900px;
-    background-color: #fff;
-    margin-left: 10px;
-    margin-left: 17px;
-    margin-top: -5px;
-}
-
-.productTitl{
-    color: #222222;
-    font-size: 14px;
-}
-
-.productTitl img{
-    height: 100px;
 }

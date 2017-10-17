@@ -10,6 +10,8 @@ import {
   Redirect,
   NavLink
 } from "react-router-dom";
+import "react-datepicker/dist/react-datepicker.css";
+import "./PaymentInformation.css";
 
 class PaymentInformation extends Component {
   constructor(props) {
@@ -83,18 +85,6 @@ class PaymentInformation extends Component {
           </div>
         </signup-progress-bar>
       );
-    };
-    const bottonContinue = () => {
-      if (this.state.checked == true) {
-        alert("marcado");
-      } else {
-        alert("no marcado");
-      }
-    };
-    const inputChecked = e => {
-      this.setState({
-        check: true
-      });
     };
     return (
       <div className="row col-md-8 col-md-offset-2 registeration pageaccount">
@@ -214,12 +204,9 @@ class PaymentInformation extends Component {
               }
             </div>
           </div>
-          {/* <NextPart/> */}
         </div>
       </div>
     );
   }
 }
-// onClick={this.state.check? alert('esta checked'): alert('no esta checked')
-
 export default PaymentInformation;

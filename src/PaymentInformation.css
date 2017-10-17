@@ -41,6 +41,7 @@
   -webkit-transition: 0.2s ease all;
 }
 
+/* active state */
 .input:focus ~ label, input:valid ~ label 		{
   top: -10px;
   font-size: 12px;
@@ -57,22 +58,6 @@
   pointer-events: none;
   opacity: 0.5;
 }
-
-/* active stat
-/* ANIMATIONS ================ */
-@-webkit-keyframes inputHighlighter {
-  from { background:#B1B1B1; }
-  to 	{ width:0; background:transparent; }
-}
-@-moz-keyframes inputHighlighter {
-  from { background:#B1B1B1; }
-  to 	{ width:0; background:transparent; }
-}
-@keyframes inputHighlighter {
-  from { background:#B1B1B1; }
-  to 	{ width:0; background:transparent; }
-}
-
 
 .bolder,
 .light {
@@ -124,6 +109,7 @@ label.upload-button {
   appearance: none;
   background-color: #3f8ddf;
   border: none;
+  color: #fff;
   cursor: pointer;
   display: inline-block;
   font-family: Roboto, Helvetica, Arial, sans-serif;
@@ -141,50 +127,7 @@ label.upload-button {
 .centered-text {
   text-align: center;
 }
-label.floating-placeholder.invalid {
-  color: #ff4d4d;
-}
-label.floating-placeholder-blurred {
-  color: #444;
-  top: -12px;
-  opacity: 1;
-}
-label.floating-placeholder-active {
-  color: #f06;
-  top: -12px;
-  opacity: 1;
-}
-label.floating-placeholder {
-  position: absolute;
-  top: -9px;
-  opacity: 0;
-  transition: all .4s ease;
-  z-index: 2;
-  left: 0;
-}
-label.floating-placeholder.invalid {
-    color: #ff4d4d;
-}
 
-label.floating-placeholder-blurred {
-    color: #444;
-    top: -12px;
-    opacity: 1;
-}
-
-label {
-  font-weight: 500;
-  font-size: .7em;
-  line-height: 1em;
-  padding: 0 5px;
-  color: #f06;
-  /* display: block; */
-  margin-bottom: -5px;
-  text-transform: uppercase;
-}
-.payment-details {
-  padding: 25px 15px;
-}
 input:not([type]),
 input[type=color],
 input[type=date],
@@ -225,14 +168,11 @@ textarea {
   position: relative;
   box-shadow: none;
 }
-.pri {
-    color: #f06;
-}
+
 .billing-schedule-wrap, .crashplan-wrap, .discount-wrap {
-    background: #fff;
     padding: 25px 15px;
 }
-@media screen and (max-width: 760px){}
+
 
 .choose-payment-source, .choosePaymentMethod {
     display: flex;
@@ -243,7 +183,7 @@ textarea {
     background: #edf2f5;
     text-align: center;
 }
-.choose-payment-source label, .choosePaymentMethod label {
+.choose-payment-source button, .choosePaymentMethod button {
     width: 50%;
     cursor: pointer;
     padding: 10px 0;
@@ -252,12 +192,20 @@ textarea {
     align-items: center;
     align-content: center;
     flex-direction: column;
-    background: #666;
+    background: rgb(179, 125, 179);
     color: #fff;
-    border-right: 1px solid #fff;
+    border-right: 1px solid;
     font-size: .9em;
     line-height: 1.2em;
 }
+/* :target {
+  background: red;
+}
+*/
+.choosePaymentMethod button:active {
+   background: rgb(203, 44, 197);
+} 
+
 .billing-schedule-wrap p, .crashplan-wrap p {
     color: #555;
 }
@@ -266,32 +214,6 @@ textarea {
 }
 
 
-user agent stylesheet
-input {
-    -webkit-appearance: textfield;
-    -webkit-rtl-ordering: logical;
-    user-select: text;
-    cursor: auto;
-    padding: 1px;
-    border-width: 2px;
-    border-style: inset;
-    border-color: initial;
-    border-image: initial;
-}
-user agent stylesheet
-input, textarea, select, button {
-    text-rendering: auto;
-    color: initial;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-   /* margin: 0em;*/
-    font: 13.3333px Arial;
-}
 .button-full-width, label.upload-button-full-width {
     width: 100%;
 }
@@ -315,37 +237,7 @@ input, textarea, select, button {
     line-height:.8em;
     margin-top:10px
   }
-  .signup-progress-wrap .signup-progress-stage{
-  float:left;
-  width:55%;
-  color:#888
-  }
-  .signup-progress-wrap .signup-progress-bar{
-  float:right;width:45%;
-  display:flex;
-  margin-top:2px
-  }
-  .signup-progress-wrap .signup-progress-bar .progress-item{
-  flex-grow:1;
-  flex-basis:0;
-  font-size:.6em
-  }
-  @media screen and (min-width:760px){
-  .signup-progress-wrap .signup-progress-bar .progress-item{
-      font-size:.8em
-  }
-  }
-  .signup-progress-wrap .signup-progress-bar .progress-item:first-child{
-  border-top-left-radius:3px;
-  border-bottom-left-radius:3px
-  }
-  .signup-progress-wrap .signup-progress-bar .progress-item .progress-info
-  {
-  width:auto;
-  margin:0 auto;
-  text-align:center;
-  line-height:1em
-  }
+ 
   .signup-progress-wrap .signup-progress-bar .progress-item .progress-value{
   height:6px;
   width:6px;
@@ -355,20 +247,24 @@ input, textarea, select, button {
   text-align:center;
   line-height:22px;
   font-size:12px;
+  color:#fff
   }
   .signup-progress-wrap .signup-progress-bar .progress-item-active .progress-value{
   background:#f06
   }
   .grey-widget,.white-widget{
-  color:#444;
+  background:#f6f6f6;
   display:table;
-  width:100%;
   padding:0 4%;
   position:relative
   }
 
   .registeration{
 
+      border-top: 5px solid #E01A66;
+      -webkit-box-shadow: 0px 5px 21px -2px rgba(0,0,0,0.47);
+      -moz-box-shadow: 0px 5px 21px -2px rgba(0,0,0,0.47);
+      box-shadow: 0px 5px 21px -2px rgba(0,0,0,0.47);
       margin-top: 50px;
   
   }
@@ -405,14 +301,3 @@ input, textarea, select, button {
       text-align: center;
   }
   
-  .manualAddress{
-      color: #F32156;
-      text-decoration: none;
-      font-size: 18px;
-  }
-
-  .manualAddress:hover{
-    color: #A3052F;
-    text-decoration: none;
-
-  }
