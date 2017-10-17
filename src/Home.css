@@ -146,6 +146,10 @@ font-weight: 400;
     margin-top: 4em;
     left: 7%;
 }
+.closeItsm{
+    margin-right: 0px;
+    color: #FF2B83;
+}
 
 /* DianaMaria */
 .header1{
@@ -161,3 +165,4 @@ font-weight: 400;
     padding-top: 30px;
     font-weight: bold;
 }
+

@@ -34,7 +34,7 @@ class Home extends Component {
         console.log(this.productUser);
     }
 
-    closeIt(){
+    closeIt() {
         this.setState({
             complete: false
         })
@@ -62,6 +62,7 @@ class Home extends Component {
                 return (
                     <li>
                         <div className="divProduct productTitl text-center col-lg-4 col-md-4 col-xs-4">
+                            <label className="closeItsm">X</label>
                             <center>
                                 <img className="img-responsive" src={product.image} />
                             </center>
@@ -89,7 +90,7 @@ class Home extends Component {
                 <HeaderMain />
                 <div className="col-lg-6 col-md-6 col-xs-6">
                     {this.state.complete && <div className="input-products">
-                    <label className="close" onClick={(e) => {this.closeIt()}}>X</label>
+                        <label className="close" onClick={(e) => { this.closeIt() }}>X</label>
                         <ProductList />
                         <div className="col-lg-12 col-md-12 col-xs-12">
                             <div className="col-lg-12 col-md-12 col-xs-12">
