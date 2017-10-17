@@ -79,7 +79,7 @@
 li {
   list-style-type: none;
 }
-a {
+.a {
   color: #f06;
   text-decoration: none;
 }
@@ -202,7 +202,7 @@ textarea {
   background: red;
 }
 */
-.choosePaymentMethod button:active {
+.choosePaymentMethod label:active {
    background: rgb(203, 44, 197);
 } 
 

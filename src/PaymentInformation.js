@@ -112,7 +112,7 @@ class PaymentInformation extends Component {
                 <span className="bolder">
                   I have no unspent criminal convictions
                 </span>
-                <a href="#" ng-click="confirm.readText =! confirm.readText">
+                <a href="#"className="a" >
                   Read more
                 </a>
               </li>
@@ -126,7 +126,9 @@ class PaymentInformation extends Component {
                 <span className="bolder">
                   I have proof of ownership for the devices I am covering
                 </span>{" "}
-                <a href="#">Read more</a>
+                <a className="a"
+                 href="#">Read more
+                 </a>
               </li>
               <li>
                 <span className="bolder">

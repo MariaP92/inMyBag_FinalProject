@@ -94,7 +94,7 @@ class PaymentInformation2 extends Component {
             <div>
               <div className="margin-top ng-valid ng-valid-maxlength ng-valid-pattern ng-dirty ng-valid-parse">
                 <div className="form-group">
-                  <input class="form-control" type="text" name="cardname" id="cardname" placeholder="NAME ON CARD" required />
+                  <input yar type="text" name="cardname" id="cardname" placeholder="NAME ON CARD" required />
                   <input type="text" name="CardNo" placeholder="Card Number" autoComplete="off" className="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty" aria-invalid="false" />
                   <input type="text" name="SecurityNo" placeholder="Security Code" maxLength={4} autoComplete="off" className="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty ng-valid-maxlength" aria-invalid="false" />
                   <input type="text" name="ExpMonth" maxLength={2} placeholder="Expiry Month" className="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty ng-valid-pattern ng-valid-maxlength" aria-invalid="false" />
