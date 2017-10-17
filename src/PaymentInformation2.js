@@ -67,7 +67,6 @@ class PaymentInformation2 extends Component {
                 </div>
               </div>
               <div
-                ng-repeat="stage in progress.stages"
                 className="progress-item "
               >
                 <div className="progress-info">
@@ -75,7 +74,6 @@ class PaymentInformation2 extends Component {
                 </div>
               </div>
               <div
-                ng-repeat="stage in progress.stages"
                 className="progress-item "
               >
                 <div className="progress-info">
@@ -83,7 +81,6 @@ class PaymentInformation2 extends Component {
                 </div>
               </div>
               <div
-                ng-repeat="stage in progress.stages"
                 className="progress-item progress-item-active "
               >
                 <div className="progress-info">
