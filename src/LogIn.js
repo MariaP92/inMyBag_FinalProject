@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './LogIn.css';
+import Header from './Header';
 import {
     BrowserRouter,
     Route,
@@ -11,6 +12,8 @@ import {
 class LogIn extends Component {
     render() {
         return (
+            <div>
+            <Header />
             <div className="body">
                 <div className="row col-md-8 col-md-offset-2 registeration pageaccount">
                     <div className="registerInner">
@@ -74,6 +77,7 @@ class LogIn extends Component {
                     </div>
                 </div>
             </div>
+        </div>
         );
     }
 }

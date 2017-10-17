@@ -87,7 +87,9 @@ class PaymentInformation2 extends Component {
         </signup-progress-bar>
       );
     };
-    return <div className="row col-md-8 col-md-offset-2 registeration pageaccount">
+    return <div>
+    <Header />
+    <div className="row col-md-8 col-md-offset-2 registeration pageaccount">
         <BarProgress />
 
         <form className="form">
@@ -146,6 +148,7 @@ class PaymentInformation2 extends Component {
             </div>
           </div>
         </form>
+      </div>
       </div>;
   }
 }
