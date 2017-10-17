@@ -1,21 +1,43 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+//import './App.css';
+import Home from './Home';
+import DataUser from './DataUser';
+import LogIn from './LogIn';
+import PaymentInformation from './PaymentInformation';
+import PaymentInformation2 from './PaymentInformation2';
+import SignUp from './SignUp';
+import {
+	BrowserRouter,
+	Route,
+	Switch,
+	Redirect
+} from 'react-router-dom'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+
+const NotFound = (props) => {
+	return (
+		<div><h2> Error 404!!</h2></div>
+	);
+}
+
+const App = (props) => {
+	const {model} =  props;
+	console.log('app.props', props)
+	return (<BrowserRouter>
+		<div>
+			<Switch>
+				<Route  path="/inMyBag_FinalProject"
+				       render={() => <Redirect to= {'/home'}/>}/>
+				<Route  path="/home" render={() => <Home model={model} />}/>
+				<Route  path="/datauser" render={() => <DataUser model={model} />}/>
+				<Route  path="/login" render={() => <LogIn model={model} />}/>
+				<Route  path="/paymentinformation" render={() => <PaymentInformation model={model} />}/>
+        <Route  path="/paymentinformation2" render={() => <PaymentInformation2 model={model} />}/>
+				<Route  path="/signup" render={() => <SignUp model={model} />}/>
+				<Route component={Home}/>
+			</Switch>
+		</div>
+	</BrowserRouter>)
 }
 
 export default App;
