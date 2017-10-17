@@ -88,7 +88,7 @@ class PaymentInformation2 extends Component {
       );
     };
     return <div>
-    <Header />
+    <Header/>
     <div className="row col-md-8 col-md-offset-2 registeration pageaccount">
         <BarProgress />
 

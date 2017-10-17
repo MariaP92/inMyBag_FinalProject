@@ -118,67 +118,67 @@ class SignUp extends Component {
         }
 
         return (
-          <div>
-          <Header />
-            <div className="body">
-                <div className="row col-md-8 col-md-offset-2 registeration pageaccount">
-                    <div className="registerInner">
-                        <div className="col-md-6 signUp">
-                            <div className="form">
-                                <BarProgress />
-                                <form>
-                                    <div className="group">
-                                        <input type="text" required className="input" />
-                                        <span className="highlight" />
-                                        <label className="label">
-                                            First Name
+            <div>
+                <Header />
+                <div className="body">
+                    <div className="row col-md-8 col-md-offset-2 registeration pageaccount">
+                        <div className="registerInner">
+                            <div className="col-md-6 signUp">
+                                <div className="form">
+                                    <BarProgress />
+                                    <form>
+                                        <div className="group">
+                                            <input type="text" required className="input" />
+                                            <span className="highlight" />
+                                            <label className="label">
+                                                First Name
                                         </label>
-                                    </div>
-                                    <div className="group">
-                                        <input type="TEXT" required className="input" />
-                                        <span className="highlight" />
-                                        <label className="label">
-                                            Last Name
+                                        </div>
+                                        <div className="group">
+                                            <input type="TEXT" required className="input" />
+                                            <span className="highlight" />
+                                            <label className="label">
+                                                Last Name
                                         </label>
-                                    </div>
-                                    <div className="group">
-                                        <input type="email" required className="input" />
-                                        <span className="highlight" />
-                                        <label className="label">
-                                            Email
+                                        </div>
+                                        <div className="group">
+                                            <input type="email" required className="input" />
+                                            <span className="highlight" />
+                                            <label className="label">
+                                                Email
                                          </label>
-                                    </div>
-                                    <div className="group">
-                                        <input type="password" required className="input" alue={this.pass}
-                                            onChange={(e) => { this.inputPass(e) }} />
-                                        <span className="highlight" />
-                                        <label className="label">
-                                            Password
+                                        </div>
+                                        <div className="group">
+                                            <input type="password" required className="input" alue={this.pass}
+                                                onChange={(e) => { this.inputPass(e) }} />
+                                            <span className="highlight" />
+                                            <label className="label">
+                                                Password
                                         </label>
-                                    </div>
-                                    <div className="group">
-                                        <input type="password" required className="input" value={this.passConfirm}
-                                            onChange={(e) => { this.inputPassConfirm(e) }} />
-                                        <span className="highlight" />
-                                        <label className="label">
-                                            Confirm Password
+                                        </div>
+                                        <div className="group">
+                                            <input type="password" required className="input" value={this.passConfirm}
+                                                onChange={(e) => { this.inputPassConfirm(e) }} />
+                                            <span className="highlight" />
+                                            <label className="label">
+                                                Confirm Password
                                          </label>
-                                    </div>
-                                    {this.state.password ?
-                                        <NavLink to="/datauser">
-                                            <button className="findAddress btn btn-primary">ADD PROFILE DETAILS</button>
-                                        </NavLink>
-                                        :
-                                        <button className="findAddress btn btn-primary" disabled>ADD PROFILE DETAILS</button>
-                                    }
-                                </form>
-                                <ButtonsSocial />
+                                        </div>
+                                        {this.state.password ?
+                                            <NavLink to="/datauser">
+                                                <button className="findAddress btn btn-primary">ADD PROFILE DETAILS</button>
+                                            </NavLink>
+                                            :
+                                            <button className="findAddress btn btn-primary" disabled>ADD PROFILE DETAILS</button>
+                                        }
+                                    </form>
+                                    <ButtonsSocial />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-          </div>
         );
     }
 }
