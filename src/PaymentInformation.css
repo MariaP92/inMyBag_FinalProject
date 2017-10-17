@@ -183,7 +183,7 @@ textarea {
     background: #edf2f5;
     text-align: center;
 }
-.choose-payment-source button, .choosePaymentMethod button {
+.choose-payment-source label, .choosePaymentMethod label {
     width: 50%;
     cursor: pointer;
     padding: 10px 0;

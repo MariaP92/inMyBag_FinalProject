@@ -111,7 +111,7 @@ class PaymentInformation2 extends Component {
           <div className="billing-schedule-wrap">
             <h3 className="centered-text">Billing Schedule</h3>
             <div className="choosePaymentMethod">
-              <button onClick={e => {
+              <label onClick={e => {
                   this.anualButton(e);
                 }} className="choosePaymentMethod-annual">
                 <span className=" billing-label">ANNUALLY</span>
@@ -121,14 +121,14 @@ class PaymentInformation2 extends Component {
                     /year
                   </div>
                 </span>
-              </button>
-              <button onClick={e => this.monthlyButton(e)} classname=" choosePaymentMethod-annual">
+              </label>
+              <label onClick={e => this.monthlyButton(e)} classname=" choosePaymentMethod-annual">
                 <span classname="billing-label">MONTHLY</span>
                 <span aria-hidden="false">
                   <b className="ng-binding">£7.78</b>
                   /month
                 </span>
-              </button>
+              </label>
             </div>
             <div>
               {this.state.showAnual && <div>
