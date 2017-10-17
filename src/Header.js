@@ -15,7 +15,7 @@ class Header extends Component {
                     <div className="header-nav-menu-no col-lg-11 col-md-11 col-xs-11">
                         <div className=" col-lg-8 col-md-8 col-xs-8 ">
                             <ul className=" col-lg-12 col-md-12 col-xs-12 ">
-                                <li className=" col-lg-3 col-md-3 col-xs-3 "><NavLink exact to="/howitwork">How it works</NavLink></li>
+                                <li className=" col-lg-3 col-md-3 col-xs-3 "><NavLink exact to="/howitworking">How it works</NavLink></li>
                                 <li className=" col-lg-3 col-md-3 col-xs-3 "><NavLink exact to="/blog">BLog</NavLink></li>
                                 <li className=" col-lg-3 col-md-3 col-xs-3 "><NavLink exact to="/login">Log In</NavLink></li>
                                 <li className=" col-lg-3 col-md-3 col-xs-3 "><NavLink exact to="/signup">Sign Up</NavLink></li>
