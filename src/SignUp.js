@@ -86,7 +86,7 @@ class SignUp extends Component {
 
         const ButtonsSocial = () => {
             return (
-                <div className="row">
+                <div className="row btns">
                     <div>
                         <div className="col-lg-6 col-xs-12">
                             <a href="http://www.facebook.com" target="_blank" className="a1">
