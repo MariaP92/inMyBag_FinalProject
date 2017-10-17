@@ -5243,10 +5243,16 @@ react-error-overlay@^2.0.2:
     settle-promise "1.0.0"
     source-map "0.5.6"
 
+<<<<<<< HEAD
 react-onclickoutside@^6.1.1:
   version "6.6.0"
   resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-6.6.0.tgz#8526d0675fad26558e9f0a400c983b813c99ef3c"
 
+=======
+<<<<<<< HEAD
+react-scripts@^1.0.14:
+=======
+>>>>>>> 3f7edcf5f1eeb13fb55e67285634ecadf6fb316f
 react-overlays@^0.7.0:
   version "0.7.3"
   resolved "https://registry.yarnpkg.com/react-overlays/-/react-overlays-0.7.3.tgz#e4caa690ce7cd7d40b2cf9cdc26356cddaf5a0e9"
@@ -5283,6 +5289,7 @@ react-router@^4.2.0:
     warning "^3.0.0"
 
 react-scripts@1.0.14:
+>>>>>>> eb07f78487dacf248afc885b3e7753fa912bb08e
   version "1.0.14"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-1.0.14.tgz#70fe76c9beb67b136b953e875bdfe4ad78d410d1"
   dependencies:

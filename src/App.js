@@ -31,7 +31,11 @@ const App = (props) => {
 				<Route  path="/home" render={() => <Home model={model} />}/>
 				<Route  path="/datauser" render={() => <DataUser model={model} />}/>
 				<Route  path="/paymentinformation" render={() => <PaymentInformation model={model} />}/>
+<<<<<<< HEAD
         		<Route  path="/paymentinformation2" render={() => <PaymentInformation2 model={model} />}/>
+=======
+      			<Route  path="/paymentinformation2" render={() => <PaymentInformation2 model={model} />}/>
+>>>>>>> 3f7edcf5f1eeb13fb55e67285634ecadf6fb316f
 				<Route  path="/signup" render={() => <SignUp model={model} />}/>
 				<Route component={Home}/>
 			</Switch>

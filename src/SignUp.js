@@ -125,4 +125,8 @@ class SignUp extends Component {
   }
 }
 
+<<<<<<< HEAD
 export default SignUp;
+=======
+export default SignUp;
+>>>>>>> 3f7edcf5f1eeb13fb55e67285634ecadf6fb316f
