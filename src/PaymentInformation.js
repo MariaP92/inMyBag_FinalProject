@@ -87,6 +87,51 @@ class PaymentInformation extends Component {
         </signup-progress-bar>
       );
     };
+    const Ulinformation = () => {
+      return(
+        <ul className="ul__confirmation">
+        <li>
+          <span className="bolder">I'm a Peruvian resident</span>
+        </li>
+        <li>
+          <span className="bolder">I'm aged 18 or over</span>
+        </li>
+        <li>
+          <span className="bolder">
+            I have not had any insurance policy voided by the provider of
+          the policy
+        </span>
+        </li>
+        <li>
+          <span className="bolder">
+            I have no unspent criminal convictions
+        </span>
+          <a href="#" className="a" >
+            Read more
+        </a>
+        </li>
+        <li>
+          <span className="bolder">
+            I have not have made a gadget insurance claim in the last 3
+          years
+        </span>
+        </li>
+        <li>
+          <span className="bolder">
+            I have proof of ownership for the devices I am covering
+        </span>{" "}
+          <a className="a"
+            href="#">Read more
+         </a>
+        </li>
+        <li>
+          <span className="bolder">
+            My devices are less that 3 years old (5 years for laptops)
+        </span>
+        </li>
+      </ul>
+      )
+    }
     return (
       <div>
         <Header />
@@ -98,48 +143,8 @@ class PaymentInformation extends Component {
                 Please read these points carefully. In order to join us at
               InMyBag, you'll need to be able to confirm the following:
             </p>
-              <ul className="ul__confirmation">
-                <li>
-                  <span className="bolder">I'm a Peruvian resident</span>
-                </li>
-                <li>
-                  <span className="bolder">I'm aged 18 or over</span>
-                </li>
-                <li>
-                  <span className="bolder">
-                    I have not had any insurance policy voided by the provider of
-                  the policy
-                </span>
-                </li>
-                <li>
-                  <span className="bolder">
-                    I have no unspent criminal convictions
-                </span>
-                  <a href="#" className="a" >
-                    Read more
-                </a>
-                </li>
-                <li>
-                  <span className="bolder">
-                    I have not have made a gadget insurance claim in the last 3
-                  years
-                </span>
-                </li>
-                <li>
-                  <span className="bolder">
-                    I have proof of ownership for the devices I am covering
-                </span>{" "}
-                  <a className="a"
-                    href="#">Read more
-                 </a>
-                </li>
-                <li>
-                  <span className="bolder">
-                    My devices are less that 3 years old (5 years for laptops)
-                </span>
-                </li>
-              </ul>
-
+            
+              <Ulinformation/>
               <span>
                 <input
                   type="checkbox"

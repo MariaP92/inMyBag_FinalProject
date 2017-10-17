@@ -16,9 +16,14 @@ class PaymentInformation2 extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      namecard: null,
+      numbercard: null,
+      codecard: null,
+      exmonth :null,
+      exyear: null,
       showAnual: false,
       showMonthly: false,
-      showPay: false,
+      showPay: false
     };
   }
   anualButton(e) {
@@ -34,9 +39,9 @@ class PaymentInformation2 extends Component {
     });
   }
   payMoney(e) {
-    this.setState( {
-      showPay:true,
-    })
+    this.setState({
+      showPay: true
+    });
   }
   render() {
     let buttonStyle = {
@@ -91,128 +96,139 @@ class PaymentInformation2 extends Component {
       );
     };
     return (
-      <div className="row col-md-8 col-md-offset-2 registeration pageaccount">
-        <BarProgress />
+      <div>
+        <Header />
+        <div className="row col-md-8 col-md-offset-2 registeration pageaccount">
+          <BarProgress />
 
-        <form className="form">
-          <div>
+          <form className="form">
             <div>
-              <div className="margin-top ng-valid ng-valid-maxlength ng-valid-pattern ng-dirty ng-valid-parse">
-                <div className="form-group">
-                  <input
-                    yar
-                    type="text"
-                    name="cardname"
-                    id="cardname"
-                    placeholder="NAME ON CARD"
-                    required
-                  />
-                  <input
-                    type="text"
-                    name="CardNo"
-                    placeholder="Card Number"
-                    autoComplete="off"
-                    className="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty"
-                    aria-invalid="false"
-                  />
-                  <input
-                    type="text"
-                    name="SecurityNo"
-                    placeholder="Security Code"
-                    maxLength={4}
-                    autoComplete="off"
-                    className="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty ng-valid-maxlength"
-                    aria-invalid="false"
-                  />
-                  <input
-                    type="text"
-                    name="ExpMonth"
-                    maxLength={2}
-                    placeholder="Expiry Month"
-                    className="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty ng-valid-pattern ng-valid-maxlength"
-                    aria-invalid="false"
-                  />
-                  <input
-                    type="text"
-                    name="ExpYear"
-                    maxLength={2}
-                    placeholder="Expiry Year"
-                    className="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty ng-valid-pattern ng-valid-maxlength"
-                    aria-invalid="false"
-                  />
-                </div>
-              </div>
-              <div className="clear" />
-              <span className="bolder pri">
-                Your payment will be processed via our secure payments provider
-              </span>
-            </div>
-          </div>
-          <div className="billing-schedule-wrap">
-            <h3 className="centered-text">Billing Schedule</h3>
-            <div className="choosePaymentMethod">
-              <label
-                onClick={e => {
-                  this.anualButton(e);
-                }}
-                className="choosePaymentMethod-annual"
-              >
-                <span className=" billing-label">ANNUALLY</span>
-                <span aria-hidden="false">
-                  <div>
-                    <b className="ng-binding">£93.40</b>
-                    /year
+              <div>
+                <div className="margin-top ng-valid ng-valid-maxlength ng-valid-pattern ng-dirty ng-valid-parse">
+                  <div className="form-group">
+                    <input
+                      className="form-control"
+                      type="text"
+                      name="cardname"
+                      id="cardname"
+                      placeholder="NAME ON CARD"
+                      required
+                    />
+                    <input
+                      className="form-control"
+                      type="number"
+                      name="CardNo"
+                      placeholder="Card Number"
+                      autoComplete="off"
+                      aria-invalid="false"
+                      required
+                    />
+                    <input
+                     className="form-control"
+                     type="text"
+                      name="SecurityNo"
+                      placeholder="Security Code"
+                      maxLength={4}
+                      autoComplete="off"
+                      aria-invalid="false"
+                      required
+                    />
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="ExpMonth"
+                      maxLength={2}
+                      placeholder="Expiry Month"
+                      aria-invalid="false"
+                      required
+                    />
+                    <input
+                      className="form-control"
+                      type="text"
+                      name="ExpYear"
+                      maxLength={2}
+                      placeholder="Expiry Year"
+                      aria-invalid="false"
+                      required
+                    />
                   </div>
-                </span>
-              </label>
-              <label
-                onClick={e => this.monthlyButton(e)}
-                classname=" choosePaymentMethod-annual"
-              >
-                <span classname="billing-label">MONTHLY</span>
-                <span aria-hidden="false">
-                  <b className="ng-binding">£7.78</b>
-                  /month
-                </span>
-              </label>
-            </div>
-            <div>
-              {this.state.showAnual && (
-                <div>
-                  <p aria-hidden="true" className="ng-hide">
-                    You will be charged <b className="ng-binding">£93.40</b>{" "}
-                    today and will be given the option to renew your policy on
-                    <b className="ng-binding">16/10/2018</b>.
-                  </p>
                 </div>
-              )}
-              {this.state.showMonthly && (
-                <p aria-hidden="true" className="ng-hide">
-                  You will be charged <b className="ng-binding">£7.78</b> today
-                  and then on the{" "}
-                  <b className="ng-binding">
-                    16th every month until October 2018
-                  </b>.
-                </p>
-              )}
-       {this.state.showPay && <div>
-            <h2 className="centered-text">
-            Payment made successfully!
-            </h2><br/><br/><br/>
-        </div> }
-        
-              <input
-                onClick={e => this.payMoney(e)}
-                className="button button-full-width"
-                type="submit"
-                name="submit"
-                value="Pay Now"
-                aria-hidden="false"
-              />
+                <span className="a pri">
+                  Your payment will be processed via our secure payments
+                  provider
+                </span>
+              </div>
             </div>
-          </div>
-        </form>
- 
+            <div className="billing-schedule-wrap">
+              <h3 className="centered-text">Billing Schedule</h3>
+              <div className="choosePaymentMethod">
+                <label
+                  onClick={e => {
+                    this.anualButton(e);
+                  }}
+                  className="choosePaymentMethod-annual"
+                >
+                  <span className=" billing-label">ANNUALLY</span>
+                  <span aria-hidden="false">
+                    <div>
+                      <b className="ng-binding">£93.40</b>
+                      /year
+                    </div>
+                  </span>
+                </label>
+                <label
+                  onClick={e => this.monthlyButton(e)}
+                  classname=" choosePaymentMethod-annual"
+                >
+                  <span classname="billing-label">MONTHLY</span>
+                  <span aria-hidden="false">
+                    <b className="ng-binding">£7.78</b>
+                    /month
+                  </span>
+                </label>
+              </div>
+              <div>
+                {this.state.showAnual && (
+                  <div>
+                    <p aria-hidden="true" className="ng-hide">
+                      You will be charged <b className="ng-binding">£93.40</b>{" "}
+                      today and will be given the option to renew your policy on
+                      <b className="ng-binding">16/10/2018</b>.
+                    </p>
+                  </div>
+                )}
+                {this.state.showMonthly && (
+                  <p aria-hidden="true" className="ng-hide">
+                    You will be charged <b className="ng-binding">£7.78</b>{" "}
+                    today and then on the{" "}
+                    <b className="ng-binding">
+                      16th every month until October 2018
+                    </b>.
+                  </p>
+                )}
+                {this.state.showPay && (
+                  <div>
+                    <h2 className="centered-text">
+                      Payment made successfully!
+                    </h2>
+                    <br />
+                    <br />
+                    <br />
+                  </div>
+                )}
+
+                <input
+                  onClick={e => this.payMoney(e)}
+                  className="button button-full-width"
+                  type="submit"
+                  name="submit"
+                  value="Pay Now"
+                  aria-hidden="false"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     );
   }

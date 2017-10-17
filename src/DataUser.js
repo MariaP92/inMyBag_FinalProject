@@ -81,6 +81,13 @@ class DataUser extends Component {
             return (
 
                 <signup-progress-bar stage="2" className="ng-isolate-scope">
+                    <div className="col-md-1 col-xs-1 text-center">
+                        {/* <a href="javascript:window.history.back();">
+                            <i
+                                className="fa fa-chevron-left arrow"
+                                aria-hidden="true" />
+                        </a> */}
+                    </div>
                     <h1 className="grey-text left">Create your account</h1>
                     <div className="signup-progress-wrap" ng-show="progress.show" aria-hidden="false">
                         <div className="signup-progress-stage ng-binding">Step 2 of 4</div>
