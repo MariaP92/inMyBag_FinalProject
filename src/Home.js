@@ -40,6 +40,16 @@ class Home extends Component {
         })
     }
 
+    delete(id){
+        console.log(id);
+        let rest = this.productUser[id].insurancePrice;
+        this.productUser.splice(id,1);
+        this.setState({
+            product:id,
+            calculateInsurance: this.state.calculateInsurance - rest
+        })
+    }
+
 
     render() {
         const InsuranceTotal = () => {
@@ -60,9 +70,9 @@ class Home extends Component {
         const getProductList = () => {
             return this.productUser.map((product, index) => {
                 return (
-                    <li>
+                    <li key={index}>
                         <div className="divProduct productTitl text-center col-lg-4 col-md-4 col-xs-4">
-                            <label className="closeItsm">X</label>
+                            <label className="closeItsm" onClick={(e)=>{this.delete(index)}}>X</label>
                             <center>
                                 <img className="img-responsive" src={product.image} />
                             </center>
