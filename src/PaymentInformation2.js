@@ -159,7 +159,7 @@ class PaymentInformation2 extends Component {
                     <br />
                     <br />
                   </div>}
-                {this.state.switch && <input onClick={e => this.payMoney(e)} className="button button-full-width" type="submit" name="submit" value="Pay Now" aria-hidden="false" />}
+                {this.state.switch && <input onClick={e => this.payMoney(e)} className="button button-full-width" type="input" name="submit" value="Pay Now" aria-hidden="false" />}
               </div>
             </div>
           </form>
