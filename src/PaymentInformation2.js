@@ -99,7 +99,7 @@ class PaymentInformation2 extends Component {
         </signup-progress-bar>
       );
     };
-    return (<div>
+    return <div>
         <Header />
         <div className="row col-md-8 col-md-offset-2 registeration pageaccount">
           <BarProgress />
@@ -120,7 +120,7 @@ class PaymentInformation2 extends Component {
               </div>
             </div>
             <div className="billing-schedule-wrap">
-              <h3 className="centered-text">Billing Schedule</h3>
+              <h3 >Billing Schedule</h3>
               <div className="choosePaymentMethod">
                 <label onClick={e => {
                     this.anualButton(e);
@@ -159,13 +159,12 @@ class PaymentInformation2 extends Component {
                     <br />
                     <br />
                   </div>}
-
-                <input onClick={e => this.payMoney(e)} className="button button-full-width" type="submit" name="submit" value="Pay Now" aria-hidden="false" />
+                {this.state.switch && <input onClick={e => this.payMoney(e)} className="button button-full-width" type="submit" name="submit" value="Pay Now" aria-hidden="false" />}
               </div>
             </div>
           </form>
         </div>
-      </div>);
+      </div>;
 
   }
 
