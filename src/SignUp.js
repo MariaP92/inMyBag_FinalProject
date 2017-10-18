@@ -52,6 +52,7 @@ class SignUp extends Component {
 
                 <signup-progress-bar stage="2" className="ng-isolate-scope">
                     <h1 className="grey-text left">Create your account</h1>
+                    <br/>
                     <div className="signup-progress-wrap" ng-show="progress.show" aria-hidden="false">
                         <div className="signup-progress-stage ng-binding">Step 1 of 4</div>
                         <div className="signup-progress-bar">
@@ -138,13 +139,15 @@ class SignUp extends Component {
                                         </label>
                                         </div>
                                         <div className="group">
-                                            <input type="TEXT" required className="input form-control" />
+                                        <br/>
+                                            <input type="text" required className="input form-control" />
                                             <span className="highlight" />
                                             <label className="label">
                                                 Last Name
                                         </label>
                                         </div>
                                         <div className="group">
+                                        <br/>
                                             <input type="email" required className="input form-control" />
                                             <span className="highlight" />
                                             <label className="label">
@@ -152,6 +155,7 @@ class SignUp extends Component {
                                          </label>
                                         </div>
                                         <div className="group">
+                                        <br/>
                                             <input type="password" required className="input form-control" alue={this.pass}
                                                 onChange={(e) => { this.inputPass(e) }} />
                                             <span className="highlight" />
@@ -160,6 +164,7 @@ class SignUp extends Component {
                                         </label>
                                         </div>
                                         <div className="group">
+                                        <br/>
                                             <input type="password" required className="input form-control" value={this.passConfirm}
                                                 onChange={(e) => { this.inputPassConfirm(e) }} />
                                             <span className="highlight" />

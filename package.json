@@ -4,11 +4,13 @@
   "private": true,
   "homepage": "https://mariap92.github.io/inMyBag_FinalProject",
   "dependencies": {
+    "date-picker": "^0.5.0",
     "react": "^16.0.0",
     "react-bootstrap": "^0.31.3",
     "react-datepicker": "^0.55.0",
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.14"
   },
   "scripts": {

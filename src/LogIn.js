@@ -20,8 +20,10 @@ class LogIn extends Component {
                             <div className="col-md-6 signUp">
                                 <div className="form">
                                     <h1 className="grey-text">LogIn</h1>
+                                    <br/>
                                     <form>
                                         <div className="group">
+                                        <br/>
                                             <input type="email" required className="input form-control" />
                                             <span className="highlight" />
                                             <label className="label">
@@ -29,6 +31,7 @@ class LogIn extends Component {
                                   </label>
                                         </div>
                                         <div className="group">
+                                            <br/>
                                             <input type="password" required className="input form-control" />
                                             <span className="highlight" />
                                             <label className="label">
