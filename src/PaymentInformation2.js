@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import DatePicker from "react-datepicker";
 import Header from "./Header";
 import moment from "moment";
-import React from 'react';
-import Plastic from 'react-plastic';
 import "./PaymentInformation.css";
 import "react-datepicker/dist/react-datepicker.css";
 import {
@@ -13,14 +11,7 @@ import {
   Redirect,
   NavLink
 } from "react-router-dom";
-export const ShowCard = () => (
-  <Plastic
-    type="amex"
-    name="Peter Sagan"
-    expiry="10/20"
-    number="444466666655555"
-    cvc="3333"
-  />);
+
 
 class PaymentInformation2 extends Component {
   constructor(props) {
@@ -33,44 +24,49 @@ class PaymentInformation2 extends Component {
       exyear: null,
       showAnual: false,
       showMonthly: false,
+      switch: false,
       showPay: false
     };
   }
   anualButton(e) {
+
     this.setState({
       showAnual: true,
-      showMonthly: false
+      showMonthly: false,
+      switch: true,
+
     });
   }
   monthlyButton(e) {
+
     this.setState({
       showMonthly: true,
-      showAnual: false
+      showAnual: false,
+      switch: true,
+
     });
   }
   
   payMoney(e) {
-    this.setState({
-      showPay: true
-    });
+    if (this.state.namecard == null || this.state.numbercard == null || this.state.codecard == null || this.state.exmonth == null || (this.state.exyear == null || this.state.switch === false)) {
+      alert("Rellenar correctamente el formulario");
+    } else {
+      this.setState({ showPay: true });
+    }
+
   }
   render() {
-    let buttonStyle = {
-      background: " blue"
-    };
     const BarProgress = () => {
       return (
         <signup-progress-bar stage="3" className="ng-isolate-scope">
           <h1 className="grey-text left">Payment Information</h1>
           <div
             className="signup-progress-wrap"
-            ng-show="progress.show"
             aria-hidden="false"
           >
             <div className="signup-progress-stage ng-binding">Step 4 of 4</div>
             <div className="signup-progress-bar">
               <div
-                ng-repeat="stage in progress.stages"
                 className="progress-item progress-item-complete"
               >
                 <div className="progress-info">
@@ -103,64 +99,19 @@ class PaymentInformation2 extends Component {
         </signup-progress-bar>
       );
     };
-    return (
-      <div>
+    return (<div>
         <Header />
         <div className="row col-md-8 col-md-offset-2 registeration pageaccount">
           <BarProgress />
-
           <form className="form">
-          <ShowCard/> 
             <div>
               <div>
-                <div className="margin-top ng-valid ng-valid-maxlength ng-valid-pattern ng-dirty ng-valid-parse">
-                  <div className="form-group">
-                    <input
-                      className="form-control"
-                      type="text"
-                      name="cardname"
-                      id="cardname"
-                      placeholder="NAME ON CARD"
-                      required
-                    />
-                    <input
-                      className="form-control"
-                      type="number"
-                      name="CardNo"
-                      placeholder="Card Number"
-                      autoComplete="off"
-                      aria-invalid="false"
-                      required
-                    />
-                    <input
-                     className="form-control"
-                     type="text"
-                      name="SecurityNo"
-                      placeholder="Security Code"
-                      maxLength={4}
-                      autoComplete="off"
-                      aria-invalid="false"
-                      required
-                    />
-                    <input
-                      type="text"
-                      className="form-control"
-                      name="ExpMonth"
-                      maxLength={2}
-                      placeholder="Expiry Month"
-                      aria-invalid="false"
-                      required
-                    />
-                    <input
-                      className="form-control"
-                      type="text"
-                      name="ExpYear"
-                      maxLength={2}
-                      placeholder="Expiry Year"
-                      aria-invalid="false"
-                      required
-                    />
-                  </div>
+                <div className="form-group">
+                  <input onChange={e => (this.state.namecard = e.target.value)} className="form-control" type="text" name="cardname" id="cardname" placeholder="NAME ON CARD" required />
+                  <input onChange={e => (this.state.numbercard = e.target.value)} className="form-control" type="number" name="CardNo" placeholder="Card Number" autoComplete="off" aria-invalid="false" required />
+                  <input onChange={e => (this.state.codecard = e.target.value)} className="form-control" type="number" name="SecurityNo" placeholder="Security Code" maxLength={4} autoComplete="off" aria-invalid="false" required />
+                  <input onChange={e => (this.state.exmonth = e.target.value)} type="text" className="form-control" name="ExpMonth" maxLength={2} placeholder="Expiry Month" aria-invalid="false" required />
+                  <input onChange={e => (this.state.exyear = e.target.value)} className="form-control" type="text" name="ExpYear" maxLength={2} placeholder="Expiry Year" aria-invalid="false" required />
                 </div>
                 <span className="a pri">
                   Your payment will be processed via our secure payments
@@ -171,12 +122,9 @@ class PaymentInformation2 extends Component {
             <div className="billing-schedule-wrap">
               <h3 className="centered-text">Billing Schedule</h3>
               <div className="choosePaymentMethod">
-                <label
-                  onClick={e => {
+                <label onClick={e => {
                     this.anualButton(e);
-                  }}
-                  className="choosePaymentMethod-annual"
-                >
+                  }} className="choosePaymentMethod-annual">
                   <span className=" billing-label">ANNUALLY</span>
                   <span aria-hidden="false">
                     <div>
@@ -185,10 +133,7 @@ class PaymentInformation2 extends Component {
                     </div>
                   </span>
                 </label>
-                <label
-                  onClick={e => this.monthlyButton(e)}
-                  classname=" choosePaymentMethod-annual"
-                >
+                <label onClick={e => this.monthlyButton(e)} classname=" choosePaymentMethod-annual">
                   <span classname="billing-label">MONTHLY</span>
                   <span aria-hidden="false">
                     <b className="ng-binding">£7.78</b>
@@ -197,50 +142,33 @@ class PaymentInformation2 extends Component {
                 </label>
               </div>
               <div>
-                {this.state.showAnual && (
-                  <div>
+                {this.state.showAnual && <div>
                     <p aria-hidden="true" className="ng-hide">
-                      You will be charged <b className="ng-binding">£93.40</b>{" "}
-                      today and will be given the option to renew your policy on
+                      You will be charged <b className="ng-binding">£93.40</b> today and will be given the option to renew your policy on
                       <b className="ng-binding">16/10/2018</b>.
                     </p>
-                  </div>
-                )}
-                {this.state.showMonthly && (
-                  <p aria-hidden="true" className="ng-hide">
-                    You will be charged <b className="ng-binding">£7.78</b>{" "}
-                    today and then on the{" "}
-                    <b className="ng-binding">
-                      16th every month until October 2018
-                    </b>.
-                  </p>
-                )}
-                {this.state.showPay && (
-                  <div>
+                  </div>}
+                {this.state.showMonthly && <p aria-hidden="true" className="ng-hide">
+                    You will be charged <b className="ng-binding">£7.78</b> today and then on the <b className="ng-binding">16th every month until October 2018</b>.
+                  </p>}
+                {this.state.showPay && <div>
                     <h2 className="centered-text">
                       Payment made successfully!
                     </h2>
                     <br />
                     <br />
                     <br />
-                  </div>
-                )}
+                  </div>}
 
-                <input
-                  onClick={e => this.payMoney(e)}
-                  className="button button-full-width"
-                  type="submit"
-                  name="submit"
-                  value="Pay Now"
-                  aria-hidden="false"
-                />
+                <input onClick={e => this.payMoney(e)} className="button button-full-width" type="submit" name="submit" value="Pay Now" aria-hidden="false" />
               </div>
             </div>
           </form>
         </div>
-      </div>
-    );
+      </div>);
+
   }
+
 }
 
 export default PaymentInformation2;
